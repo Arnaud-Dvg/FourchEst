@@ -2,29 +2,34 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commander | Fouch'Est</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est">
+  <meta name="author" content="Wilders Grand'EST">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>FourchEst | HomePage</title>
 </head>
 
 <body>
+  <header>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <a href="home.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"></a>
-            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="avatar compte" width="50px"></a>
-            <!--WIDTH A ENLEVER !!-->
-        </nav>
-    </header>
+    <nav class= "relative flex items-center justify-center ">
+      <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
+      <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login" 
+        class="absolute top-2 right-0 w-10 "></a>
+    </nav>
+  </header>
 
     <!-- MAIN -->
+
+
     <main>
 
         <!-- Nom resto sélectionné & bannière -->
         <section>
-            <h1>Nom du restau sélectionné</h1>
-            <img src="/assetes/images/burger.jpg" alt="banière du restaurant sélectionné" width="50%">
+            
+            <img src="/assetes/images/resto9.jpg" alt="banière du restaurant sélectionné" class=" mb-1.5 mt-2.5 m-2 border rounded-4xl">
+            <h1 class="flex justify-center">Nom du restau sélectionné</h1>
             <!--WIDTH A ENLEVER !!-->
         </section>
 
@@ -142,7 +147,7 @@
 
     <!-- SCRIPT-->
     <script src="/src/order.js"></script>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
