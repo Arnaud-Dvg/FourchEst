@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander | Fouch'Est</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="home.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"></a>
+            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="avatar compte" width="50px"></a>
+            <!--WIDTH A ENLEVER !!-->
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Nom resto sélectionné & bannière -->
+        <section>
+            <h1>Nom du restau sélectionné</h1>
+            <img src="/assetes/images/burger.jpg" alt="banière du restaurant sélectionné" width="50%">
+            <!--WIDTH A ENLEVER !!-->
+        </section>
+
+        <!-- Emplacement des plats sélectionnables -->
+        <section>
+
+            <!-- 1 plat = 1 article -->
+            <article>
+                <h2>Bretzels</h2>
+                <img src="/assetes/images/bretzel.jpg" alt="bretzels" width="100px">
+                <section>
+                    <p>3.50€</p>
+                    <button value="3.50" name="Bretzels" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+
+            <article>
+                <h2>Burgers</h2>
+                <img src="/assetes/images/burger.jpg" alt="burgers" width="100px">
+                <section>
+                    <p>11.80€</p>
+                    <button value="11.80" name="Burgers" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+
+            <article>
+                <h2>Choucroute</h2>
+                <img src="/assetes/images/choucroute.jpg" alt="choucroute" width="100px">
+                <section>
+                    <p>16.50€</p>
+                    <button value="16.50" name="Choucroute" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+
+            <article>
+                <h2>Flamekueche</h2>
+                <img src="/assetes/images/flam.jpg" alt="flamekueche" width="100px">
+                <section>
+                    <p>7.80€</p>
+                    <button value="7.80" name="Flamekueche" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+
+            <article>
+                <h2>Kebab</h2>
+                <img src="/assetes/images/kebab.jpg" alt="kebab" width="100px">
+                <section>
+                    <p>8.50€</p>
+                    <button value="8.50" name="Kebab" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+
+            <article>
+                <h2>Macaron</h2>
+                <img src="/assetes/images/macaron.jpg" alt="macaron" width="100px">
+                <section>
+                    <p>6.60€</p>
+                    <button value="6.60" name="Macarons" class="buttonAdd" type="button">Ajouter au panier</button>
+                </section>
+            </article>
+        </section>
+
+        <!-- Section panier -->
+        <section>
+
+            <!-- Affichage logo -->
+            <section>
+                <img src="/assetes/images/panier.png" alt="icône panier" width="20px">
+                <p class="itemNumber">0</p>
+            </section>
+
+            <!-- Liste des plats commandés -->
+            <section>
+
+                <!-- ul A MASQUER EN VERSION MOBILE -->
+                <p>Plats commandés :</p>
+                <ul class="mealList">
+                </ul>
+                <p>Total :</p>
+                <p class="totalPrice"></p>
+                <p>€</p>
+                <button type="button">Commander</button>
+            </section>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- Logo + copyright-->
+        <section>
+            <img src="/assetes/images/FourchEst_Logo.png" alt="Logo de la société" width="100px">
+            <p>©2025 Fourch'Est</p>
+        </section>
+
+        <!-- Mentions légales -->
+        <section>
+            <a href="about.html">
+                <p>Mentions légales</p>
+            </a>
+            <a href="about.html">
+                <p>Nous contacter</p>
+            </a>
+        </section>
+
+        <!-- Logo réseaux-->
+        <section>
+            <a href="index.html"><img src="/assetes/images/insta logo.png" alt="instagram" width="100px"></a>
+            <a href="index.html"><img src="/assetes/images/twitter logo.png" alt="twitter" width="100px"></a>
+            <a href="index.html"><img src="/assetes/images/facebook logo.png" alt="facebook" width="100px"></a>
+        </section>
+    </footer>
+
+    <!-- SCRIPT-->
+    <script src="/Files/order.js"></script>
+</body>
+
+</html>
