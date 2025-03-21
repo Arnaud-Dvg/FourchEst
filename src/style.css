@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: Gotham-Bold;
-    src: url(./assetes/fonts/Gotham-Bold.otf);
+    src: url(/assetes/fonts/Gotham-Bold.otf);
     font-family: Shrikhand-Regular;
     src: url(./assetes/fonts/Shrikhand-Regular.ttf);
 }
@@ -23,23 +23,22 @@ h3 {
 body {
     font-family: "Gotham-Bold";
 
+    background-image: url("/assetes/images/bg-mobile.png");
+    background-size: cover;
+    background-position: center;
+
     a {
         font-family: "Gotham-Bold";
         color: black;
     }
 }
 
-h1, h2, h3{
-    font-family:'shrikhand-Regular';
-    color:#191998;
+p {
+    font-family: "Gotham-Bold";
 }
 
-p{
-    font-family: 'Gotham-Bold';
-}
-
-a{
-    color:black;
+a {
+    color: black;
 }
 
 
@@ -48,18 +47,17 @@ a{
     display: flex;
     flex-direction: column;
     gap: .7rem;
-  }
-  
-  .carousel-track {
+}
+
+.carousel-track {
     display: flex;
     gap: .5rem;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-track img {
+}
+
+.carousel-track img {
     width: 7rem;
     height: 4rem;
     object-fit: cover;
     border-radius: .5rem;
-  }
-
+}

@@ -13,18 +13,19 @@
     <header>
 
         <nav class="relative flex items-center justify-center ">
-            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="w-50 flex">
+            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
             <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login"
-                    class="absolute top-2 right-0 w-10 "></a>
+                    class="absolute top-2 right-0 w-10 rounded-full"></a>
         </nav>
     </header>
 
     <!-- MAIN -->
-    <main class="flex flex-col text-center">
+    <main class="flex flex-col text-center mb-30">
 
         <!-- Section présentation de l'entreprise -->
         <section>
-            <h1 class="text-[#191998] border-b-1 border-b-black mb-8 mx-20 text-2xl md:mx-50">Qui sommes-nous ?</h1>
+            <h1 class="text-[#191998] bg-white border-b-1 border-b-black mb-8 mx-10 text-2xl md:mx-50">Qui sommes-nous ?
+            </h1>
 
             <!-- Section "Qui sommes nous"-->
             <section class="flex flex-col gap-5 md:flex-row-reverse md:mx-20">
@@ -34,43 +35,43 @@
                     <h2 class="font-bold">Découvrez l'équipe :</h2>
 
                     <!-- Liste des articles -->
-                    <section class="flex flex-wrap items-center justify-center">
+                    <section class="flex flex-wrap items-center justify-center md:h-full">
 
                         <!-- 1 article = 1 photo + nom + job title-->
-                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                        <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
                             <img class="rounded-full" src="https://www.gravatar.com/avatar/87622?d=retro&s=300"
                                 alt="Photo de l'équipe" width="100px">
-                            <h3>Arnaud D.</h3>
+                            <p>Arnaud D.</p>
                             <p>Directeur artistique</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                        <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
                             <img class="rounded-full" src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
                                 alt="Photo de l'équipe" width="100px">
-                            <h3>David dM.</h3>
+                            <p>Arnaud D.</p>
                             <p>Consultant JS</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                        <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
                             <img class="rounded-full"
                                 src="https://storage.googleapis.com/assets_upload_prod/R00FVsszSGz3JO1EYfsAMh6n7bMS0zOA.jpg"
                                 alt="Photo de l'équipe" width="100px">
-                            <h3>Guillaume Z.</h3>
+                            <p>Arnaud D.</p>
                             <p>Happiness manager</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                        <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
                             <img class="rounded-full" src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300"
                                 alt="Photo de l'équipe" width="100px">
-                            <h3>Quentin B.</h3>
+                            <p>Arnaud D.</p>
                             <p>Expert framework</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                        <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
                             <img class="rounded-full"
                                 src="https://storage.googleapis.com/assets_upload_prod/DzveiDPFXjTyaxR8CrX49JG6pb03qPu6.jpg"
                                 alt="Photo de l'équipe" width="100px">
-                            <h3>Rahmoun D.</h3>
+                            <p>Arnaud D.</p>
                             <p>Chef de projet</p>
                         </article>
                     </section>
@@ -104,30 +105,32 @@
 
                     <!-- Section contact -->
                     <section class="bg-gray-300 rounded-4xl py-5 flex flex-col gap-y-5 justify-center">
-                        <h2 class="font-bold mb-5">Nous contacter :</h2>
+                        <h2 class="font-bold">Nous contacter :</h2>
 
                         <!-- Nom prénom -->
-                        <section class="flex justify-center">
+                        <section class="flex justify-center md:justify-between md:w-full md:max-w-2/3 md:self-center">
                             <form>
-                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="name"
+                                <input class="w-30 mx-8 text-center bg-gray-200 md:mx-0" type="text" id="name"
                                     placeholder="Nom">
                             </form>
                             <form>
-                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="forename"
+                                <input class="w-30 mx-8 text-center bg-gray-200 md:mx-0" type="text" id="forename"
                                     placeholder="Prenom" id="forename">
                             </form>
                         </section>
 
                         <form>
-                            <input class="w-76 text-center bg-gray-200" type="email" id="mail" placeholder="Mail">
+                            <input class="w-76 text-center bg-gray-200 md:max-w-2/3 md:w-full" type="email" id="mail"
+                                placeholder="Mail">
                         </form>
 
                         <form>
-                            <input class="bg-gray-200 w-76 text-center" type="tel" id="telephone"
+                            <input class="bg-gray-200 w-76 text-center md:max-w-2/3 md:w-full" type="tel" id="telephone"
                                 placeholder="N° Téléphone">
                         </form>
 
-                        <form id="form" class="flex flex-col justify-center w-76 mx-auto gap-y-5">
+                        <form id="form"
+                            class="flex flex-col justify-center w-76 mx-auto gap-y-5 md:max-w-2/3 md:w-full">
                             <textarea class="bg-gray-200 text-center" id="message" name="message" rows="5" cols="1"
                                 maxlength="500" wrap placeholder="Tapez votre message ici..."></textarea>
                             <input class="bg-gray-200" type="submit" value="Envoyer">
@@ -140,7 +143,8 @@
 
         <!-- Section mentions légales -->
         <section>
-            <h1 class="text-[#191998] border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">Mentions légales</h1>
+            <h1 class="text-[#191998] bg-white border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">Mentions
+                légales</h1>
             <section class="bg-gray-300 rounded-4xl py-5 md:mx-20">
                 <section class="flex flex-col mx-10 gap-y-5">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel iusto officiis est
@@ -171,7 +175,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="flex bg-amber-50">
 
         <!-- Logo + copyright-->
         <section>
@@ -191,9 +195,9 @@
 
         <!-- Logo réseaux-->
         <section>
-            <a href="index.html"><img src="/assetes/images/insta logo.png" alt="instagram" width="100px"></a>
-            <a href="index.html"><img src="/assetes/images/twitter logo.png" alt="twitter" width="100px"></a>
-            <a href="index.html"><img src="/assetes/images/facebook logo.png" alt="facebook" width="100px"></a>
+            <a href="index.html"><img src="/assetes/images/insta logo.png" alt="instagram" width="20px"></a>
+            <a href="index.html"><img src="/assetes/images/twitter logo.png" alt="twitter" width="20px"></a>
+            <a href="index.html"><img src="/assetes/images/facebook logo.png" alt="facebook" width="20px"></a>
         </section>
     </footer>
 

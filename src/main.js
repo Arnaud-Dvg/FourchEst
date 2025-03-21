@@ -47,17 +47,17 @@ function createCarouselRow(images, delay) {
   function moveCarousel() {
     currentIndex += 1;
     const trackWidth = carouselTrack.scrollWidth / allImages.length;
-    carouselTrack.style.transform = `translateX(-${currentIndex * trackWidth}px)`; 
+    carouselTrack.style.transform = `translateX(-${currentIndex * trackWidth}px)`;
 
     // revient a 0 une fois que le le tableau fini
     if (currentIndex >= allImages.length) {
-        currentIndex = 0;
-      
-        // effet du deplacement
-        setTimeout(() => {
-          carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-        }, 50);
-      }
+      currentIndex = 0;
+
+      // effet du deplacement
+      setTimeout(() => {
+        carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+      }, 50);
+    }
   }
 
   // Start auto-scroll with a delay
