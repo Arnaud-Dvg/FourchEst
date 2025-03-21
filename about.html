@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos | Fouch'Est</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <nav class="relative flex items-center justify-center ">
+            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="w-50 flex">
+            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login"
+                    class="absolute top-2 right-0 w-10 "></a>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex flex-col text-center">
+
+        <!-- Section présentation de l'entreprise -->
+        <section>
+            <h1 class="text-[#191998] border-b-1 border-b-black mb-8 mx-20 text-2xl md:mx-50">Qui sommes-nous ?</h1>
+
+            <!-- Section "Qui sommes nous"-->
+            <section class="flex flex-col gap-5 md:flex-row-reverse md:mx-20">
+
+                <!-- Section photos -->
+                <section class="bg-gray-300 rounded-4xl flex flex-col items-center pt-5">
+                    <h2 class="font-bold">Découvrez l'équipe :</h2>
+
+                    <!-- Liste des articles -->
+                    <section class="flex flex-wrap items-center justify-center">
+
+                        <!-- 1 article = 1 photo + nom + job title-->
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://www.gravatar.com/avatar/87622?d=retro&s=300"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Arnaud D.</h3>
+                            <p>Directeur artistique</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>David dM.</h3>
+                            <p>Consultant JS</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full"
+                                src="https://storage.googleapis.com/assets_upload_prod/R00FVsszSGz3JO1EYfsAMh6n7bMS0zOA.jpg"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Guillaume Z.</h3>
+                            <p>Happiness manager</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Quentin B.</h3>
+                            <p>Expert framework</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full"
+                                src="https://storage.googleapis.com/assets_upload_prod/DzveiDPFXjTyaxR8CrX49JG6pb03qPu6.jpg"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Rahmoun D.</h3>
+                            <p>Chef de projet</p>
+                        </article>
+                    </section>
+                </section>
+
+                <!-- Histoire + contact (panel gauche)-->
+                <section class="flex flex-col gap-5 md:w-6xl">
+
+                    <!-- Section notre Histoire -->
+                    <section class="bg-gray-300 rounded-4xl py-5">
+                        <h2 class="font-bold mb-5">Notre histoire</h2>
+
+                        <p class="mx-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                            assumenda
+                            consequuntur
+                            nisi
+                            quae
+                            sapiente, deserunt saepe quibusdam laborum at in magni veniam optio itaque mollitia sequi
+                            nihil
+                            asperiores nemo cumque.
+                            Tempora incidunt quas sit veniam quasi suscipit at! Laborum culpa qui eius ducimus sint in
+                            dolorem
+                            doloribus, tempore cumque, voluptatibus nihil maiores ipsa modi nulla praesentium nam
+                            necessitatibus! In, beatae?
+                            Vitae tempore pariatur mollitia ratione iusto quidem quia praesentium maxime distinctio
+                            voluptates
+                            delectus quam odio debitis a natus nesciunt, laborum, saepe suscipit ipsum incidunt atque
+                            aliquam
+                            modi aspernatur perspiciatis. Obcaecati?</p>
+                    </section>
+
+                    <!-- Section contact -->
+                    <section class="bg-gray-300 rounded-4xl py-5 flex flex-col gap-y-5 justify-center">
+                        <h2 class="font-bold mb-5">Nous contacter :</h2>
+
+                        <!-- Nom prénom -->
+                        <section class="flex justify-center">
+                            <form>
+                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="name"
+                                    placeholder="Nom">
+                            </form>
+                            <form>
+                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="forename"
+                                    placeholder="Prenom" id="forename">
+                            </form>
+                        </section>
+
+                        <form>
+                            <input class="w-76 text-center bg-gray-200" type="email" id="mail" placeholder="Mail">
+                        </form>
+
+                        <form>
+                            <input class="bg-gray-200 w-76 text-center" type="tel" id="telephone"
+                                placeholder="N° Téléphone">
+                        </form>
+
+                        <form id="form" class="flex flex-col justify-center w-76 mx-auto gap-y-5">
+                            <textarea class="bg-gray-200 text-center" id="message" name="message" rows="5" cols="1"
+                                maxlength="500" wrap placeholder="Tapez votre message ici..."></textarea>
+                            <input class="bg-gray-200" type="submit" value="Envoyer">
+                        </form>
+
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- Section mentions légales -->
+        <section>
+            <h1 class="text-[#191998] border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">Mentions légales</h1>
+            <section class="bg-gray-300 rounded-4xl py-5 md:mx-20">
+                <section class="flex flex-col mx-10 gap-y-5">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel iusto officiis est
+                        deleniti enim odit fuga cumque? Esse odio adipisci iure velit voluptate? Odio voluptatibus
+                        voluptates repellat officia provident..</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt consequuntur sapiente
+                        dolor, minus rerum saepe cumque labore perferendis harum ea. A expedita nostrum in vel, minus
+                        laudantium dicta quae.
+                        Quas eaque voluptatem tempora sint possimus temporibus eos iusto optio error incidunt! Cum
+                        nesciunt non, accusamus est libero eum unde voluptatem nemo, ducimus saepe quam maiores numquam
+                        sunt iure atque.
+                        Tempore quos sunt earum, ea deserunt voluptatum? Debitis nam modi officia natus totam eius omnis
+                        laborum error, molestiae repellendus maiores? Nisi, expedita neque illum maiores doloribus nulla
+                        dignissimos odio eveniet..</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore repudiandae, harum optio
+                        culpa cumque deserunt impedit commodi id placeat nisi animi iusto repellat, ipsa ut. Doloribus
+                        officia debitis facere.
+                        Nam facilis in sunt fuga repudiandae quo reprehenderit, sint explicabo similique, unde
+                        asperiores doloremque ipsum ab tempora aperiam! Reprehenderit maxime nemo doloribus temporibus
+                        possimus sapiente nisi aspernatur asperiores perspiciatis ipsam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore libero ab
+                        consequuntur animi? Reiciendis, ea rem ex expedita dignissimos ratione sequi. Aspernatur animi
+                        quis maiores, voluptas odio ratione a?.</p>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- Logo + copyright-->
+        <section>
+            <img src="/assetes/images/FourchEst_Logo.png" alt="Logo de la société" width="100px">
+            <p>©2025 Fourch'Est</p>
+        </section>
+
+        <!-- Mentions légales -->
+        <section>
+            <a href="about.html">
+                <p>Mentions légales</p>
+            </a>
+            <a href="about.html">
+                <p>Nous contacter</p>
+            </a>
+        </section>
+
+        <!-- Logo réseaux-->
+        <section>
+            <a href="index.html"><img src="/assetes/images/insta logo.png" alt="instagram" width="100px"></a>
+            <a href="index.html"><img src="/assetes/images/twitter logo.png" alt="twitter" width="100px"></a>
+            <a href="index.html"><img src="/assetes/images/facebook logo.png" alt="facebook" width="100px"></a>
+        </section>
+    </footer>
+
+    <!-- SCRIPT-->
+    <script src="/about.js"></script>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
