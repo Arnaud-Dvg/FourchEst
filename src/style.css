@@ -1,11 +1,32 @@
 @import 'tailwindcss';
 
 
+
+
+/* Import des fonts */
+
 @font-face {
     font-family: Gotham-Bold;
     src: url(./assetes/fonts/Gotham-Bold.otf);
     font-family: Shrikhand-Regular;
     src: url(./assetes/fonts/Shrikhand-Regular.ttf);
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Shrikhand-Regular";
+    color: #191998;
+}
+
+body {
+    font-family: "Gotham-Bold";
+
+    a {
+        font-family: "Gotham-Bold";
+        color: black;
+    }
 }
 
 h1, h2, h3{
@@ -41,3 +62,4 @@ a{
     object-fit: cover;
     border-radius: .5rem;
   }
+
