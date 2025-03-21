@@ -11,29 +11,81 @@
 
     <!-- HEADER -->
     <header>
-        <nav>
-            <a href="home.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"></a>
-            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="avatar compte" width="50px"></a>
+
+        <nav class="relative flex items-center justify-center ">
+            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="w-50 flex">
+            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login"
+                    class="absolute top-2 right-0 w-10 "></a>
         </nav>
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main class="flex flex-col text-center">
 
         <!-- Section présentation de l'entreprise -->
         <section>
-            <h1>Qui sommes-nous ?</h1>
+            <h1 class="text-[#191998] border-b-1 border-b-black mb-8 mx-20 text-2xl md:mx-50">Qui sommes-nous ?</h1>
 
             <!-- Section "Qui sommes nous"-->
-            <section>
+            <section class="flex flex-col gap-5 md:flex-row-reverse md:mx-20">
+
+                <!-- Section photos -->
+                <section class="bg-gray-300 rounded-4xl flex flex-col items-center pt-5">
+                    <h2 class="font-bold">Découvrez l'équipe :</h2>
+
+                    <!-- Liste des articles -->
+                    <section class="flex flex-wrap items-center justify-center">
+
+                        <!-- 1 article = 1 photo + nom + job title-->
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://www.gravatar.com/avatar/87622?d=retro&s=300"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Arnaud D.</h3>
+                            <p>Directeur artistique</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>David dM.</h3>
+                            <p>Consultant JS</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full"
+                                src="https://storage.googleapis.com/assets_upload_prod/R00FVsszSGz3JO1EYfsAMh6n7bMS0zOA.jpg"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Guillaume Z.</h3>
+                            <p>Happiness manager</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full" src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Quentin B.</h3>
+                            <p>Expert framework</p>
+                        </article>
+
+                        <article class="flex flex-col items-center my-6 w-[12rem]">
+                            <img class="rounded-full"
+                                src="https://storage.googleapis.com/assets_upload_prod/DzveiDPFXjTyaxR8CrX49JG6pb03qPu6.jpg"
+                                alt="Photo de l'équipe" width="100px">
+                            <h3>Rahmoun D.</h3>
+                            <p>Chef de projet</p>
+                        </article>
+                    </section>
+                </section>
 
                 <!-- Histoire + contact (panel gauche)-->
-                <section>
-                    <!-- Section notre Histoire -->
-                    <section>
-                        <h2>Notre histoire :</h2>
+                <section class="flex flex-col gap-5 md:w-6xl">
 
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate assumenda consequuntur
+                    <!-- Section notre Histoire -->
+                    <section class="bg-gray-300 rounded-4xl py-5">
+                        <h2 class="font-bold mb-5">Notre histoire</h2>
+
+                        <p class="mx-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                            assumenda
+                            consequuntur
                             nisi
                             quae
                             sapiente, deserunt saepe quibusdam laborum at in magni veniam optio itaque mollitia sequi
@@ -51,116 +103,69 @@
                     </section>
 
                     <!-- Section contact -->
-                    <section>
-                        <h2>Nous contacter :</h2>
+                    <section class="bg-gray-300 rounded-4xl py-5 flex flex-col gap-y-5 justify-center">
+                        <h2 class="font-bold mb-5">Nous contacter :</h2>
+
+                        <!-- Nom prénom -->
+                        <section class="flex justify-center">
+                            <form>
+                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="name"
+                                    placeholder="Nom">
+                            </form>
+                            <form>
+                                <input class="w-30 mx-8 text-center bg-gray-200" type="text" id="forename"
+                                    placeholder="Prenom" id="forename">
+                            </form>
+                        </section>
+
                         <form>
-                            <input type="text" id="name" placeholder="Nom">
+                            <input class="w-76 text-center bg-gray-200" type="email" id="mail" placeholder="Mail">
                         </form>
+
                         <form>
-                            <input type="text" id="forename" placeholder="Prenom" id="forename">
+                            <input class="bg-gray-200 w-76 text-center" type="tel" id="telephone"
+                                placeholder="N° Téléphone">
                         </form>
-                        <form>
-                            <input type="email" id="mail" placeholder="Mail">
+
+                        <form id="form" class="flex flex-col justify-center w-76 mx-auto gap-y-5">
+                            <textarea class="bg-gray-200 text-center" id="message" name="message" rows="5" cols="1"
+                                maxlength="500" wrap placeholder="Tapez votre message ici..."></textarea>
+                            <input class="bg-gray-200" type="submit" value="Envoyer">
                         </form>
-                        <form>
-                            <input type="tel" id="telephone" placeholder="N° Téléphone">
-                        </form>
-                        <form id="form">
-                            <textarea id="message" name="message" rows="5" cols="33" maxlength="500" wrap
-                                placeholder="Tapez votre message ici..."></textarea>
-                            <input type="submit" value="Envoyer">
-                        </form>
+
                     </section>
-                </section>
-
-                <!-- Section photos -->
-                <section>
-                    <h2>Découvrez l'équipe :</h2>
-
-                    <!-- 1 article = 1 photo + nom + job title-->
-                    <article>
-                        <img src="/assetes/images/bretzel.jpg" alt="Photo de l'équipe" width="100px">
-                        <h3>Arnaud D.</h3>
-                        <p>Directeur artistique</p>
-                    </article>
-
-                    <article>
-                        <img src="/assetes/images/bretzel.jpg" alt="Photo de l'équipe" width="100px">
-                        <h3>David M.</h3>
-                        <p>Consultant JS</p>
-                    </article>
-
-                    <article>
-                        <img src="/assetes/images/bretzel.jpg" alt="Photo de l'équipe" width="100px">
-                        <h3>Guillaume Z.</h3>
-                        <p>Happiness manager</p>
-                    </article>
-
-                    <article>
-                        <img src="/assetes/images/bretzel.jpg" alt="Photo de l'équipe" width="100px">
-                        <h3>Quentin B.</h3>
-                        <p>Expert framework</p>
-                    </article>
-
-                    <article>
-                        <img src="/assetes/images/bretzel.jpg" alt="Photo de l'équipe" width="100px">
-                        <h3>Rahmoun D.</h3>
-                        <p>Chef de projet</p>
-                    </article>
-
                 </section>
             </section>
         </section>
 
         <!-- Section mentions légales -->
         <section>
-            <h1>Mentions légales</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro minus asperiores ab veritatis
-                quos
-                officia. Nihil assumenda laboriosam fuga blanditiis temporibus fugit, nam numquam officia
-                voluptate
-                delectus minima esse neque.
-                Sit dolor temporibus deleniti ex perspiciatis! Quaerat quasi est minus itaque, aperiam quos
-                neque
-                temporibus doloribus nesciunt nobis optio voluptas laborum expedita, quo veniam impedit dicta?
-                Animi
-                consequuntur fuga laudantium!
-                Sapiente distinctio aut, quam ipsa molestiae est velit doloremque omnis error nihil voluptatum
-                quidem
-                quibusdam excepturi, nisi voluptates ipsam quae? Inventore porro ex perspiciatis ut cupiditate!
-                Consequatur accusamus a rem.
-                Repellat odio placeat eveniet porro inventore labore alias voluptatibus veniam natus molestias
-                eligendi,
-                minus quam laboriosam hic debitis aperiam tempore ea, adipisci recusandae omnis exercitationem?
-                Deserunt
-                impedit perspiciatis suscipit dolores?
-                Eius reprehenderit rem ad ipsa quos fuga alias at amet nemo dolorum asperiores distinctio
-                nesciunt est
-                dolore iste veritatis libero aliquid quasi odio, provident itaque aliquam repudiandae repellat!
-                Et,
-                inventore.
-                Eligendi magni optio iste quia dolores quaerat, enim consequuntur nobis perspiciatis quidem
-                minima harum
-                explicabo repellat temporibus, a qui perferendis? Dolorem sit nisi pariatur ipsa quasi quaerat
-                tempore
-                eos doloremque?
-                Suscipit repudiandae quo non similique illo beatae voluptatem perspiciatis, voluptatibus vero
-                iste,
-                consequuntur totam molestias. Officia in at quibusdam, sunt mollitia aliquam nesciunt natus
-                velit
-                reiciendis voluptatem atque ad! Rem.
-                Laborum, fuga dicta qui blanditiis facere eligendi fugit ex in quis nemo soluta nisi quam labore
-                exercitationem voluptatum modi reprehenderit accusamus fugiat aut nam cupiditate aliquam ipsam
-                dolor
-                sequi. Sed.
-                Cupiditate ab obcaecati est saepe, aut quasi nulla, ipsa tempore, quas fuga odit. Debitis quae
-                dicta
-                illo laboriosam culpa beatae eius. Sed eligendi ut reiciendis qui animi placeat, rerum atque!
-                Nemo velit repellat laborum officiis voluptatibus odio, vel dicta ipsa doloremque, nostrum
-                quibusdam
-                soluta necessitatibus sed repudiandae facere voluptates eos modi voluptas? Unde porro
-                perferendis fuga
-                saepe similique ab numquam.</p>
+            <h1 class="text-[#191998] border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">Mentions légales</h1>
+            <section class="bg-gray-300 rounded-4xl py-5 md:mx-20">
+                <section class="flex flex-col mx-10 gap-y-5">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel iusto officiis est
+                        deleniti enim odit fuga cumque? Esse odio adipisci iure velit voluptate? Odio voluptatibus
+                        voluptates repellat officia provident..</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt consequuntur sapiente
+                        dolor, minus rerum saepe cumque labore perferendis harum ea. A expedita nostrum in vel, minus
+                        laudantium dicta quae.
+                        Quas eaque voluptatem tempora sint possimus temporibus eos iusto optio error incidunt! Cum
+                        nesciunt non, accusamus est libero eum unde voluptatem nemo, ducimus saepe quam maiores numquam
+                        sunt iure atque.
+                        Tempore quos sunt earum, ea deserunt voluptatum? Debitis nam modi officia natus totam eius omnis
+                        laborum error, molestiae repellendus maiores? Nisi, expedita neque illum maiores doloribus nulla
+                        dignissimos odio eveniet..</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore repudiandae, harum optio
+                        culpa cumque deserunt impedit commodi id placeat nisi animi iusto repellat, ipsa ut. Doloribus
+                        officia debitis facere.
+                        Nam facilis in sunt fuga repudiandae quo reprehenderit, sint explicabo similique, unde
+                        asperiores doloremque ipsum ab tempora aperiam! Reprehenderit maxime nemo doloribus temporibus
+                        possimus sapiente nisi aspernatur asperiores perspiciatis ipsam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore libero ab
+                        consequuntur animi? Reiciendis, ea rem ex expedita dignissimos ratione sequi. Aspernatur animi
+                        quis maiores, voluptas odio ratione a?.</p>
+                </section>
+            </section>
         </section>
 
     </main>
@@ -193,8 +198,8 @@
     </footer>
 
     <!-- SCRIPT-->
-    <script src="/src/about.js"></script>
-    <script type="module" src="./main.js"></script>
+    <script src="/about.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
