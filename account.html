@@ -11,224 +11,660 @@
 </head>
 
 <body>
-    <header>
 
-        <nav>
-            <a href="index.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="logo"></a>
-            <a href="account.html"><img src="/assetes/images/SignUp.png" alt="Sign up/Login" class="navigator"></a>
+    <header class="header max-h-40">
+
+        <nav class="relative flex items-center justify-center ">
+            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
+            <a href="index.html"><img src="/assetes/images/logUout.png" alt="Logout"
+                    class="absolute top-2 right-0 w-5 "></a>
         </nav>
 
     </header>
+
     <!-- Avatar et Nom du titulaire du compte -->
-    <section>
-        <img src="./assetes/images/avatar.jpg" class="avatar" />
-        <h2>Yavuz Kutuk</h2>
+    <section class="flex flex-col items-center">
+        <span class="relative inline-block">
+            <img src="./assetes/images/avatar.jpg" class="object-cover w-35 h-35 rounded-full shadow-black" pt-5 />
+            <span
+                class="absolute animate-pulse top-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></span>
+        </span>
+
+        <h1 class="pt-5 pb-5">Yavuz Kutuk</h1>
     </section>
+
     <!-- Liste restaurants favorits en cliquant sur l'un des lien ca ammenera au panier existant-->
-    <section>
-        <article>
-            <h3>Restaurant Favorits</h3>
-        </article>
-        <article>
-            <a href="#"><img src="./assetes/images/kebab.jpg" alt="Kebab de Belfort, un grand classique" />
-                <h3>Kebab Royal</h3>
-            </a>
-        </article>
-        <article>
-            <a href="#"><img src="./assetes/images/tacos_kebab.png" alt="menu tacos Kebab de Nancy" />
-                <h3>Kebab Royal</h3>
-            </a>
-        </article>
-        <article>
-            <a href="#"><img src="./assetes/images/kebab_choucroute.jpeg" alt="Exclu menu kebab choucroute" />
-                <h3>Kebab Royal</h3>
-            </a>
-        </article>
+    <section class="bg-gray-300 flex justify-center size-5rem;5rem">
+        <h2>Restaurant Favorits</h2>
     </section>
+    <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
+            <div class="rounded overflow-hidden shadow-lg">
+
+                <a href="#"></a>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full"
+                            src="./assetes/images/kebab.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                            alt="Le meilleur Kebab de Nancy">
+                        <div
+                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                        </div>
+                    </a>
+                    <a href="#!">
+                        <div
+                            class="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            KEBAB ROYAL
+                        </div>
+                    </a>
+
+                    <a href="!#">
+                        <div
+                            class="text-sm absolute top-0 right-0 bg-indigo-600 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            <span class="font-bold">27</span>
+                            <small>Fevrier</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="px-6 py-4">
+
+                    <a href="#"
+                        class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Best
+                        Meilleur Kebab de tout Strasbourg</a>
+                    <p class="text-gray-500 text-sm">
+                        Généreux et riche en cholesterol !
+                    </p>
+                </div>
+                <div class="px-6 py-4 flex flex-row items-center">
+                    <span href="#" class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
+                        <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256
+                c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128
+                c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="ml-1">6 days ago</span></span>
+                </div>
+            </div>
+            <div class="rounded overflow-hidden shadow-lg">
+                <a href="#"></a>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full"
+                            src="./assetes/images/tacos_kebab.png?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                            alt="Unique Tacos Sushi">
+                        <div
+                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                        </div>
+                    </a>
+                    <a href="#!">
+                        <div
+                            class="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            Tacos Sushi
+                        </div>
+                    </a>
+
+                    <a href="!#">
+                        <div
+                            class="text-sm absolute top-0 right-0 bg-indigo-600 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            <span class="font-bold">12</span>
+                            <small>March</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="px-6 py-4">
+
+                    <a href="#"
+                        class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Le
+                        seul et l'unique Tacos Sushi</a>
+                    <p class="text-gray-500 text-sm">
+                        Oserez vous ce Tacos unique au bon Gôut de la Mer
+                    </p>
+                </div>
+                <div class="px-6 py-4 flex flex-row items-center">
+                    <span href="#"
+                        class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
+                        <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="ml-1">3 h read</span></span>
+                </div>
+            </div>
+            <div class="rounded overflow-hidden shadow-lg">
+
+                <a href="#"></a>
+                <div class="relative">
+                    <a href="#">
+                        <img class="w-full"
+                            src="./assetes/images/kebab_choucroute.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                            alt="Kebab Choucroute">
+                        <div
+                            class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                        </div>
+                    </a>
+                    <a href="#!">
+                        <div
+                            class="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            Kebaba Choucroute
+                        </div>
+                    </a>
+
+                    <a href="!#">
+                        <div
+                            class="text-sm absolute top-0 right-0 bg-indigo-600 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                            <span class="font-bold">10</span>
+                            <small>Mars</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="px-6 py-4">
+
+                    <a href="#"
+                        class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Toute
+                        l'Aslace dans un Kebab</a>
+                    <p class="text-gray-500 text-sm">
+                        Venez comme vous etes, et profiter du meilleur de la choucroute Alsacienne et du meilleur Kebab
+                        de tout Strasbourg
+                    </p>
+                </div>
+                <div class="px-6 py-4 flex flex-row items-center">
+                    <span href="#"
+                        class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
+                        <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256 c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128 c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="ml-1">6 mins read</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Liste des dernieres commandes, 6 sur la version pc et 4 sur la version gsm-->
-    <section>
-        <article>
-            <h3> Mes dernieres commandes</h3>
-        </article>
-        <article class="cmd1">
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <p>Montant = 44,00€</p>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
 
-        <article>
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  md:p-12 w-full p-4">
+        <div class="p-6 bg-gray-100">
+            <!-- Panier 1 -->
+            <div class="p-6 bg-gray-100 flex flex-col">
+                <div class="py-14 px-4">
+                    <div class="flex flex-col space-y-2">
+                        <h1 class="text-3xl dark:text-white">Order #13432</h1>
+                        <p class="text-base text-gray-600 dark:text-gray-300">21st March 2021 at 10:34 PM</p>
+                    </div>
+                    <div class="mt-10 flex flex-col space-y-4">
+                        <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-4">
+                            <p class="text-lg">Customer’s Cart</p>
+                            <div class="mt-4 flex flex-col space-y-4">
+                                <div class="w-full md:w-40">
+                                    <img class="w-full" src="https://i.ibb.co/L039qbN/Rectangle-10.png" alt="dress" />
+                                </div>
+                                <div class="border-b border-gray-200 pb-8 space-y-4">
+                                    <h3 class="text-xl dark:text-white">Premium Quality Dress</h3>
+                                    <div class="flex flex-col space-y-2">
+                                        <p class="text-sm text-gray-800 dark:text-white"><span
+                                                class="text-gray-300 dark:text-gray-400">Style:</span> Italic Minimal
+                                            Design</p>
+                                        <p class="text-sm text-gray-800 dark:text-white"><span
+                                                class="text-gray-300 dark:text-gray-400">Size:</span> Small</p>
+                                        <p class="text-sm text-gray-800 dark:text-white"><span
+                                                class="text-gray-300 dark:text-gray-400">Color:</span> Light Blue</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <p class="text-base dark:text-white">$36.00 <span
+                                            class="text-red-300 line-through">$45.00</span></p>
+                                    <p class="text-base dark:text-white">01</p>
+                                    <p class="text-base dark:text-white font-semibold">$36.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-6">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Summary</h3>
+                            <div class="border-b border-gray-200 pb-4 space-y-4">
+                                <div class="flex justify-between">
+                                    <p class="text-base text-gray-800 dark:text-white">Subtotal</p>
+                                    <p class="text-base text-gray-600 dark:text-gray-300">$56.00</p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-base text-gray-800 dark:text-white">Discount <span
+                                            class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800">STUDENT</span>
+                                    </p>
+                                    <p class="text-base text-gray-600 dark:text-gray-300">-$28.00 (50%)</p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p class="text-base text-gray-800 dark:text-white">Shipping</p>
+                                    <p class="text-base text-gray-600 dark:text-gray-300">$8.00</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between font-semibold">
+                                <p class="text-base text-gray-800 dark:text-white">Total</p>
+                                <p class="text-base text-gray-600 dark:text-gray-300">$36.00</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                class="py-5 w-96 bg-gray-800 text-white text-base font-medium hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100">
+                                View Carrier Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-gray-100">
+                <!-- Panier 2 -->
+                <div class="p-6 bg-gray-100 flex flex-col">
+                    <div class="py-14 px-4">
+                        <div class="flex flex-col space-y-2">
+                            <h1 class="text-3xl dark:text-white">Order #13432</h1>
+                            <p class="text-base text-gray-600 dark:text-gray-300">21st March 2021 at 10:34 PM</p>
+                        </div>
+                        <div class="mt-10 flex flex-col space-y-4">
+                            <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-4">
+                                <p class="text-lg">Customer’s Cart</p>
+                                <div class="mt-4 flex flex-col space-y-4">
+                                    <div class="w-full md:w-40">
+                                        <img class="w-full" src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            alt="dress" />
+                                    </div>
+                                    <div class="border-b border-gray-200 pb-8 space-y-4">
+                                        <h3 class="text-xl dark:text-white">Premium Quality Dress</h3>
+                                        <div class="flex flex-col space-y-2">
+                                            <p class="text-sm text-gray-800 dark:text-white"><span
+                                                    class="text-gray-300 dark:text-gray-400">Style:</span> Italic
+                                                Minimal Design</p>
+                                            <p class="text-sm text-gray-800 dark:text-white"><span
+                                                    class="text-gray-300 dark:text-gray-400">Size:</span> Small</p>
+                                            <p class="text-sm text-gray-800 dark:text-white"><span
+                                                    class="text-gray-300 dark:text-gray-400">Color:</span> Light Blue
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <p class="text-base dark:text-white">$36.00 <span
+                                                class="text-red-300 line-through">$45.00</span></p>
+                                        <p class="text-base dark:text-white">01</p>
+                                        <p class="text-base dark:text-white font-semibold">$36.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-6">
+                                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Summary</h3>
+                                <div class="border-b border-gray-200 pb-4 space-y-4">
+                                    <div class="flex justify-between">
+                                        <p class="text-base text-gray-800 dark:text-white">Subtotal</p>
+                                        <p class="text-base text-gray-600 dark:text-gray-300">$56.00</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-base text-gray-800 dark:text-white">Discount <span
+                                                class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800">STUDENT</span>
+                                        </p>
+                                        <p class="text-base text-gray-600 dark:text-gray-300">-$28.00 (50%)</p>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p class="text-base text-gray-800 dark:text-white">Shipping</p>
+                                        <p class="text-base text-gray-600 dark:text-gray-300">$8.00</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between font-semibold">
+                                    <p class="text-base text-gray-800 dark:text-white">Total</p>
+                                    <p class="text-base text-gray-600 dark:text-gray-300">$36.00</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center">
+                                <button
+                                    class="py-5 w-96 bg-gray-800 text-white text-base font-medium hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100">
+                                    View Carrier Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-gray-100">
+                    <!-- Panier 3 -->
+                    <div class="p-6 bg-gray-100 flex flex-col">
+                        <div class="py-14 px-4">
+                            <div class="flex flex-col space-y-2">
+                                <h1 class="text-3xl dark:text-white">Order #13432</h1>
+                                <p class="text-base text-gray-600 dark:text-gray-300">21st March 2021 at 10:34 PM</p>
+                            </div>
+                            <div class="mt-10 flex flex-col space-y-4">
+                                <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-4">
+                                    <p class="text-lg">Customer’s Cart</p>
+                                    <div class="mt-4 flex flex-col space-y-4">
+                                        <div class="w-full md:w-40">
+                                            <img class="w-full" src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                                alt="dress" />
+                                        </div>
+                                        <div class="border-b border-gray-200 pb-8 space-y-4">
+                                            <h3 class="text-xl dark:text-white">Premium Quality Dress</h3>
+                                            <div class="flex flex-col space-y-2">
+                                                <p class="text-sm text-gray-800 dark:text-white"><span
+                                                        class="text-gray-300 dark:text-gray-400">Style:</span> Italic
+                                                    Minimal Design</p>
+                                                <p class="text-sm text-gray-800 dark:text-white"><span
+                                                        class="text-gray-300 dark:text-gray-400">Size:</span> Small</p>
+                                                <p class="text-sm text-gray-800 dark:text-white"><span
+                                                        class="text-gray-300 dark:text-gray-400">Color:</span> Light
+                                                    Blue</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <p class="text-base dark:text-white">$36.00 <span
+                                                    class="text-red-300 line-through">$45.00</span></p>
+                                            <p class="text-base dark:text-white">01</p>
+                                            <p class="text-base dark:text-white font-semibold">$36.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-6">
+                                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Summary</h3>
+                                    <div class="border-b border-gray-200 pb-4 space-y-4">
+                                        <div class="flex justify-between">
+                                            <p class="text-base text-gray-800 dark:text-white">Subtotal</p>
+                                            <p class="text-base text-gray-600 dark:text-gray-300">$56.00</p>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p class="text-base text-gray-800 dark:text-white">Discount <span
+                                                    class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800">STUDENT</span>
+                                            </p>
+                                            <p class="text-base text-gray-600 dark:text-gray-300">-$28.00 (50%)</p>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <p class="text-base text-gray-800 dark:text-white">Shipping</p>
+                                            <p class="text-base text-gray-600 dark:text-gray-300">$8.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between font-semibold">
+                                        <p class="text-base text-gray-800 dark:text-white">Total</p>
+                                        <p class="text-base text-gray-600 dark:text-gray-300">$36.00</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <button
+                                        class="py-5 w-96 bg-gray-800 text-white text-base font-medium hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100">
+                                        View Carrier Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-100">
+                        <!-- Panier 4-->
+                        <div class="p-6 bg-gray-100 flex flex-col">
+                            <div class="py-14 px-4">
+                                <div class="flex flex-col space-y-2">
+                                    <h1 class="text-3xl dark:text-white">Order #13432</h1>
+                                    <p class="text-base text-gray-600 dark:text-gray-300">21st March 2021 at 10:34 PM
+                                    </p>
+                                </div>
+                                <div class="mt-10 flex flex-col space-y-4">
+                                    <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-4">
+                                        <p class="text-lg">Customer’s Cart</p>
+                                        <div class="mt-4 flex flex-col space-y-4">
+                                            <div class="w-full md:w-40">
+                                                <img class="w-full" src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                                    alt="dress" />
+                                            </div>
+                                            <div class="border-b border-gray-200 pb-8 space-y-4">
+                                                <h3 class="text-xl dark:text-white">Premium Quality Dress</h3>
+                                                <div class="flex flex-col space-y-2">
+                                                    <p class="text-sm text-gray-800 dark:text-white"><span
+                                                            class="text-gray-300 dark:text-gray-400">Style:</span>
+                                                        Italic Minimal Design</p>
+                                                    <p class="text-sm text-gray-800 dark:text-white"><span
+                                                            class="text-gray-300 dark:text-gray-400">Size:</span> Small
+                                                    </p>
+                                                    <p class="text-sm text-gray-800 dark:text-white"><span
+                                                            class="text-gray-300 dark:text-gray-400">Color:</span> Light
+                                                        Blue</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <p class="text-base dark:text-white">$36.00 <span
+                                                        class="text-red-300 line-through">$45.00</span></p>
+                                                <p class="text-base dark:text-white">01</p>
+                                                <p class="text-base dark:text-white font-semibold">$36.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col bg-gray-50 dark:bg-gray-800 px-4 py-6">
+                                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Summary</h3>
+                                        <div class="border-b border-gray-200 pb-4 space-y-4">
+                                            <div class="flex justify-between">
+                                                <p class="text-base text-gray-800 dark:text-white">Subtotal</p>
+                                                <p class="text-base text-gray-600 dark:text-gray-300">$56.00</p>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <p class="text-base text-gray-800 dark:text-white">Discount <span
+                                                        class="bg-gray-200 p-1 text-xs font-medium dark:bg-white dark:text-gray-800">STUDENT</span>
+                                                </p>
+                                                <p class="text-base text-gray-600 dark:text-gray-300">-$28.00 (50%)</p>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <p class="text-base text-gray-800 dark:text-white">Shipping</p>
+                                                <p class="text-base text-gray-600 dark:text-gray-300">$8.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between font-semibold">
+                                            <p class="text-base text-gray-800 dark:text-white">Total</p>
+                                            <p class="text-base text-gray-600 dark:text-gray-300">$36.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <button
+                                            class="py-5 w-96 bg-gray-800 text-white text-base font-medium hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-100">
+                                            View Carrier Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <article>
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
+                    <section>
+                        <article>
+                            <h3> Mes dernieres commandes</h3>
+                        </article>
+                        <article class="cmd1">
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <p>Montant = 44,00€</p>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
 
-        <article>
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
+                        <article>
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
 
-        <article>
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
+                        <article>
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
 
-        <article>
-            <p>date</p>
-            <p>Nom resto</p>
-            <p>Commande</p>
-            <ul>
-                <li>Kebab Choucroute</li>
-                <li>Grande frite</li>
-                <li>Cola light</li>
-                <li>menu enfant</li>
-                <li>Kebab</li>
-                <li>Kebab</li>
-                <li>Petite frite</li>
-                <li>Carola</li>
-                <li>Elzas Cola</li>
-            </ul>
-            <button><a href="./order.html">commander à nouveau</a></button>
-        </article>
-    </section>
+                        <article>
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
 
-    <!-- Info personnelles, voir si en cliquant sur modifier un prompt apparait et change les infos -->
-    <section>
-        <article>
-            <h3>Informations personnelles</h3>
-        </article>
-        <article>
-            <aside>
-                <p>Kutuk</p>
-            </aside>
-            <aside>
-                <p>Yavuz</p>
-            </aside>
-            <aside>
-                <p>6 rue des Grands Hommes</p>
-            </aside>
-            <aside>
-                <p>67000 STRASBOURG (pas la saucisse)</p>
-            </aside>
-            <aside>
-                <p>Sonnez au grand portail noir a gauche de la villa de Brendan Eich.<br />Le pourboire sera versé par
-                    Mark Zuckerberg</p>
-            </aside>
-        </article>
-        <!-- Infos de paiement idem changement un prompt qui propopse de changer numero CB puis alerte qui dit "Tu veux pas 100balles et un mars" au lieu de demander le crypto -->
-        <article>
-            <img src="./assetes/images/logo-cb.jpg" alt="On prend la CB" />
-            <img src="./assetes/images/PaypalLogo.png" alt="ou bien Paypal" />
-            <img src="./assetes/images/ApplePayLogo.png" alt="et même apple pay" />
-        </article>
-        <article>
-            <aside>
-                <p>5553-4561-4321-6666</p>
-            </aside>
-            <aside>
-                <p>Tu veux pas 100balles et un mars?</p>
-            </aside>
-        </article>
+                        <article>
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
 
-    </section>
+                        <article>
+                            <p>date</p>
+                            <p>Nom resto</p>
+                            <p>Commande</p>
+                            <ul>
+                                <li>Kebab Choucroute</li>
+                                <li>Grande frite</li>
+                                <li>Cola light</li>
+                                <li>menu enfant</li>
+                                <li>Kebab</li>
+                                <li>Kebab</li>
+                                <li>Petite frite</li>
+                                <li>Carola</li>
+                                <li>Elzas Cola</li>
+                            </ul>
+                            <button><a href="./order.html">commander à nouveau</a></button>
+                        </article>
+                    </section>
 
-    </main>
-    <footer>
-        <!-- Logo + copyright-->
-        <section>
-            <a href="./index.html"><img src="/assetes/images/FourchEst_Logo.png" alt="Logo de la société"
-                    class="logo" /></a>
-            <p>©2025 Fourch'Est</p>
-        </section>
+                    <!-- Info personnelles, voir si en cliquant sur modifier un prompt apparait et change les infos -->
+                    <section>
+                        <article>
+                            <h3>Informations personnelles</h3>
+                        </article>
+                        <article>
+                            <aside>
+                                <p>Kutuk</p>
+                            </aside>
+                            <aside>
+                                <p>Yavuz</p>
+                            </aside>
+                            <aside>
+                                <p>6 rue des Grands Hommes</p>
+                            </aside>
+                            <aside>
+                                <p>67000 STRASBOURG (pas la saucisse)</p>
+                            </aside>
+                            <aside>
+                                <p>Sonnez au grand portail noir a gauche de la villa de Brendan Eich.<br />Le pourboire
+                                    sera versé par
+                                    Mark Zuckerberg</p>
+                            </aside>
+                        </article>
+                        <!-- Infos de paiement idem changement un prompt qui propopse de changer numero CB puis alerte qui dit "Tu veux pas 100balles et un mars" au lieu de demander le crypto -->
+                        <article>
+                            <img src="./assetes/images/logo-cb.jpg" alt="On prend la CB" />
+                            <img src="./assetes/images/PaypalLogo.png" alt="ou bien Paypal" />
+                            <img src="./assetes/images/ApplePayLogo.png" alt="et même apple pay" />
+                        </article>
+                        <article>
+                            <aside>
+                                <p>5553-4561-4321-6666</p>
+                            </aside>
+                            <aside>
+                                <p>Tu veux pas 100balles et un mars?</p>
+                            </aside>
+                        </article>
 
-        <!-- Mentions légales -->
-        <section>
-            <a href="about.html">
-                <p>Mentions légales</p>
-            </a>
-            <a href="about.html">
-                <p>Nous contacter</p>
-            </a>
-        </section>
+                    </section>
 
-        <!-- Logo réseaux-->
-        <section>
-            <a href="#"><img src="/assetes/images/insta logo.png" alt="instagram" class="logres"></a>
-            <a href="#"><img src="/assetes/images/twitter logo.png" alt="twitter" class="logres"></a>
-            <a href="#"><img src="/assetes/images/facebook logo.png" alt="facebook" class="logres"></a>
-        </section>
-    </footer>
+                    </main>
+                    <footer>
+                        <!-- Logo + copyright-->
+                        <section>
+                            <a href="./index.html"><img src="/assetes/images/FourchEst_Logo.png"
+                                    alt="Logo de la société" class="logo" /></a>
+                            <p>©2025 Fourch'Est</p>
+                        </section>
 
-    <script type="module" src="./src/main.js"></script>
+                        <!-- Mentions légales -->
+                        <section>
+                            <a href="about.html">
+                                <p>Mentions légales</p>
+                            </a>
+                            <a href="about.html">
+                                <p>Nous contacter</p>
+                            </a>
+                        </section>
+
+                        <!-- Logo réseaux-->
+                        <section>
+                            <a href="#"><img src="/assetes/images/insta logo.png" alt="instagram" class="logres"></a>
+                            <a href="#"><img src="/assetes/images/twitter logo.png" alt="twitter" class="logres"></a>
+                            <a href="#"><img src="/assetes/images/facebook logo.png" alt="facebook" class="logres"></a>
+                        </section>
+                    </footer>
+
+                    <script type="module" src="./src/main.js"></script>
 
 </body>
 
