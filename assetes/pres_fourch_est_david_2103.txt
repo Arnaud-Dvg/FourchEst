@@ -1,0 +1,12 @@
+Jusqu'à maintenant notre utilisateur est toujours anonyme, il viens de choisir le restaurant dans lequel il veut commander.
+
+Il accède donc à une page sur laquelle il pourra voir les plats proposé par le restaurant.
+
+Il choisi ces plats, ces quantités et automatiquement les produits seront ajouté au panier qui est a droite.
+
+C'est la, que la stratégie a tous son sens, l'utilisateur  est venu par curiosité sur le site en ce disant "Qu'est ce que je pourrais manger ce midi?"
+Sans la moindre contrainte, nous l'avons conduit à trouver un restaurant, à remplir un panier, nous avons donc créer un besoins car notre utilisateur maintenant ne se demande plus se qu'il pourrait manger, mais "J'ai envie de manger ces plats!"
+
+L'utilisateur va donc en bas de son panier cliquer sur "COMMANDER" qui l'amènera vers une page ou il pourra créer son compte pour finaliser la vente.
+
+Si l'utilisateur  est déjà connecté, nous avons prévu une page ou il pourra modifier son compte que va vous présenter maintenant Arnaud
