@@ -10,84 +10,166 @@
 </head>
 <body>
 <!-- HEADER -->
-    <header>
-        <!-- NAV Logo + Sign Up/Login-->
-        <nav>
-            <a href="home.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" width="150px"></a>
-            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login" width="50px"></a>
-        </nav>
 
+    <header>
+
+            <nav class= "relative flex items-center justify-center ">
+              <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
+              <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login" class="absolute top-2 right-0 w-10 "></a>
+            </nav>
     </header>
-    
+
 
     <main>
 
         <!-- Titre "Nos restaurants" -->
         <h1>Nos restaurants</h1>
-        
-            <!-- Filtre -->
-            <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="burger">
-        </label>
-        <ul>
-            <li><button>Végétarien</button></li>
-            <li><button>Cuisine Locale</button></a></li>
-            <li><button>Note</button></li>
-            <li><button>(Menu déroulant type nourriture)</button></li>
-            <li><button>Valider le choix</button></li>
-        </ul>
-            </nav>
-       
-        <section class="section1">
+    
             <!-- Barre de recherche -->
-            <article>
-                <input type="text" placeholder="Rechercher..." class="search-input">
-                <button class="search-button">🔍</button>
-            </article>
-            <!-- Filtre -->
-            <article>
+        <section class="section1">
+            <div class="relative flex m-2 max-w-[300px] mx-auto">
+                <input
+                  type="search"
+                  class="relative m-0 block flex-auto rounded border border-solid border-black bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-black focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-black dark:text-black dark:placeholder:text-black dark:autofill:shadow-autofill dark:focus:border-primary"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="exampleFormControlInput2"
+                  aria-describedby="button-addon2" />
+                <span
+                  class="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-surface dark:border-black dark:text-black [&>svg]:h-5 [&>svg]:w-5"
+                  id="button-addon2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                </span>
+              </div>
 
-            </article>
         </section>
 
+<!-- Filtre -->
+<div class="relative">
+    <button
+        id="dropdownMenuButton"
+        class="flex items-center rounded bg-white px-6 py-2 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:bg-gray-200 focus:bg-gray-200 focus:outline-none">
+        Filtre
+        <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+        </span>
+    </button>
+
+    <ul id="dropdownMenu"
+        class="absolute z-10 mt-2 hidden min-w-max list-none rounded-lg border border-gray-300 bg-white text-base shadow-lg">
+        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Végétarien</a></li>
+        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Cuisine locale</a></li>
+        <hr class="my-2 h-0 border border-t-0 border-gray-300" />
+        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Choisir</a></li>
+    </ul>
+</div>
+
+        
         <!-- Liste des restaurants -->
-        <section class="section2">
+        <section class="section2 flex flex-col">
+
             <!-- Article 1 1ere carte restautant img+titre -->
             <article>
-                <a href="order.html"><img src="/src/images/resto1.jpg" alt="Restaurant 1" width="250px"><h2>La Choucroute Royal</h2></a>
-            </article>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+            
             <!-- Article 2 2eme carte restaurant img+titre-->
             <article>
-                <a href="order.html"><img src="/src/images/resto2.jpg" alt="Restaurant 2" width="250px"><h2>La Fine Bulle</h2></a>
-            </article>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+
             <!-- Article 3 3eme carte restaurant img+titre-->
-            <article>
-                <a href="order.html"><img src="/src/images/resto3.jpg" alt="Restaurant 3" width="250px"><h2>Le Grand Stan'</h2></a>
-            </article>
+           <article>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+
             <!-- Article 4 4eme carte restautant img+titre -->
             <article>
-                <a href="order.html"><img src="/src/images/resto4.jpg" alt="Restaurant 4" width="250px"><h2>Titre resto 4</h2></a>
-            </article>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+
             <!-- Article 5 5eme carte restaurant img+titre-->
-            <article>
-                <a href="order.html"><img src="/src/images/resto5.jpg" alt="Restaurant 5" width="250px"><h2>Titre resto 5</h2></a>
-            </article>
+           <article>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+            
             <!-- Article 6 6eme carte restaurant img+titre-->
             <article>
-                <a href="order.html"><img src="/src/images/resto6.jpg" alt="Restaurant 6" width="250px"><h2>Titre resto 6</h2></a>
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+
                  <!-- Article 7 7eme carte restautant img+titre -->
-            <article>
-                <a href="order.html"><img src="/src/images/resto7.jpg" alt="Restaurant 7" width="250px"><h2>Titre resto 7</h2></a>
-            </article>
+            <article> 
+                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                </div>
+                </div>
+                </article>
+
             <!-- Article 8 8eme carte restaurant img+titre-->
-            <article>
-                <a href="order.html"><img src="/src/images/resto8.jpg" alt="Restaurant 8" width="250px"><h2>Titre resto 8</h2></a>
+          <article>
+            <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+            <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+            <div class="p-1 py-2 text-surface dark:to-black text-center">
+            <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+            </div>
+            </div>
             </article>
+
             <!-- Article 9 9eme carte restaurant img+titre-->
-            <article>
-                <a href="order.html"><img src="/src/images/resto9.jpg" alt="Restaurant 9" width="250px"><h2>Titre resto 9</h2></a>
+           <article>
+            <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
+            <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+            <div class="p-1 py-2 text-surface dark:to-black text-center">
+            <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+            </div>
+            </div>
             </article>
+
         </section>
 
     </main>
@@ -121,5 +203,26 @@
     </footer>
 
     <script type="module" src="./src/main.js"></script>
+
+    <!-- JS pour le menu filtre -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const dropdownToggle = document.getElementById("dropdownMenuButton");
+          const dropdownMenu = document.getElementById("dropdownMenu");
+      
+          dropdownToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            dropdownMenu.classList.toggle("hidden");
+          });
+      
+          document.addEventListener("click", function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+              dropdownMenu.classList.add("hidden");
+            }
+          });
+        });
+      </script>
+      
+
 </body>
 </html>
