@@ -26,6 +26,7 @@ body {
     background-image: url("/assetes/images/bg-mobile.png");
     background-size: cover;
     background-position: center;
+    /* center à supprimer ? Aspect différent selon les pages*/
 
     a {
         font-family: "Gotham-Bold";
