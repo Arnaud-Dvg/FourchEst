@@ -5,27 +5,55 @@
 
 /* Import des fonts */
 
-
-h1, h2, h3{
-    font-family: 'roboto', Times, serif;
-    color:Black;
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(/assetes/fonts/Gotham-Bold.otf);
+    font-family: Shrikhand-Regular;
+    src: url(./assetes/fonts/Shrikhand-Regular.ttf);
 }
 
-p{
-    font-family: 'Source Sans 3';
+
+h1,
+h2,
+h3 {
+    font-family: "Shrikhand-Regular";
+    color: #191998;
 }
 
-a{
-    color:black;
+body {
+    font-family: "Gotham-Bold";
+
+    background-image: url("/assetes/images/bg-mobile.png");
+    background-size: cover;
+    background-position: center;
+    /* center à supprimer ? Aspect différent selon les pages*/
+
+    a {
+        font-family: "Gotham-Bold";
+        color: black;
+    }
 }
+
+p {
+    font-family: "Gotham-Bold";
+}
+
+footer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /*---------CAROUSEL------------*/
   
   .carousel-track {
+
     display: flex;
     padding: .5rem;
     transition: transform 0.5s ease-in-out;
-  }
+
+}
   
   .carousel-track img {
     width: 10rem;
@@ -33,3 +61,4 @@ a{
     object-fit: cover;
     border-radius: .5rem;
   }
+
