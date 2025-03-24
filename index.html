@@ -1,31 +1,253 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est"
+    />
+    <meta name="author" content="Wilders Grand'EST" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>FourchEst | HomePage</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est">
-  <meta name="author" content="Wilders Grand'EST">
-  <link rel="stylesheet" href="./src/style.css">
-  <title>FourchEst | HomePage</title>
-</head>
 
-<body>
-  <header>
-    <nav class="relative flex items-center justify-center ">
-      <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
-      <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login"
-          class="absolute top-2 right-0 w-10 "></a>
-    </nav>
-    <h1 class="text-center text-2xl ">Vos plats régionaux, <br> livres chez vous !</h1>
-  </header>
+  <body
+    class="bg-cover bg-center object-contain"
+    style="background-image: url('/assetes/images/mobile_background.png')"
+  >
+    <header>
+      <nav class="relative flex items-center justify-center">
+        <a href="account.html"
+          ><svg
+            class="h-8 text-white absolute top-2 right-0 w-10"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            /></svg
+        ></a>
 
-  <div class="carousel-container w-full flex items-center justify-center pt-10">
-    <div class="carousel-track pause-reset"></div>
-  </div>
+        <img
+          src="/assetes/images/FourchEst_Logo.png"
+          alt="logo Fourch'Est"
+          class="mt-5 mb-7 w-50 flex"
+        />
+      </nav>
+      <h1 class="text-center text-2xl">
+        Vos plats régionaux, <br />
+        livres chez vous !
+      </h1>
+    </header>
 
-  <script type="module" src="./src/main.js"></script>
+    <!---------------------------Bar de recherche--------------------->
 
-</body>
+    <form class="my-5 mx-7">
+      <label
+        for="default-search"
+        class="mb-2 text-sm font-medium text-gray-900 sr-only"
+        >Search</label
+      >
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+        <select
+          type="search"
+          id="default-search"
+          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+          placeholder="Position..."
+          required
+        >
+          <option value="metz">Metz</option>
+          <option value="nancy">Nancy</option>
+          <option value="strasbourg">Strasbourg</option>
+          <option value=""></option>
+        </select>
 
+        <button
+          type="submit"
+          class="text-white absolute end-2.5 bottom-2.5 bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+        >
+          Recherche
+        </button>
+      </div>
+    </form>
+
+    <!---------------------------CAROUSEL--------------------------->
+
+    <div
+      class="carousel-container w-full flex flex-col justify-center gap-0.7 pt-10"
+    >
+      <div
+        class="carousel-track flex gap-0.5 transition-transform duration-0.5r ease-in-out"
+      ></div>
+    </div>
+
+    <!---------------------------Cartes----------------------------->
+
+    <section class="flex flex-col">
+      <div
+        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+      >
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+          Livraison rapide
+        </h2>
+        <div class="flex justify-center p-1">
+          <img
+            src="assetes/images/livraison rapide.png"
+            class="w-32 h-32 rounded-xl object-contain"
+            alt="Livraison rapide"
+          />
+        </div>
+        <div class="p-5 text-center">
+          <button
+            class="px-4 py-2 bg-yellow-300 text-black border-b-transparent text-sm font-medium rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+      >
+        <h2 class="text-lg font-bold bg-white text-gray-800 mb-2 text-center pt-5">
+          Livraison rapide
+        </h2>
+        <div class="flex justify-center p-1">
+          <img
+            src="assetes/images/fraisreduits.png"
+            class="w-32 h-32 rounded-xl object-contain"
+            alt="Livraison rapide"
+          />
+        </div>
+        <div class="p-5 text-center">
+          <button
+            class="px-4 py-2 bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+      >
+        <h2 class="text-lg font-bold bg-white text-gray-800 mb-2 text-center pt-5">
+          Livraison rapide
+        </h2>
+        <div class="flex justify-center pt-1">
+          <img
+            src="assetes/images/platslocaux.png"
+            class="w-70 h-32 rounded-xl object-contain"
+            alt="Livraison rapide"
+          />
+        </div>
+        <div class="p-5 text-center">
+          <button
+            class="px-4 p-2 bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------Footer--------------------------->
+
+    <footer
+      class="text-black border-t border-black bg-white bg-opacity-50 py-4"
+    >
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Copyright -->
+        <p class="text-sm font-medium">&copy; 2025</p>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-blue-500">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-blue-400">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-pink-500">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>

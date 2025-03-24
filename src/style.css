@@ -38,10 +38,6 @@ p {
     font-family: "Gotham-Bold";
 }
 
-a {
-    color: black;
-}
-
 footer {
     background-color: white;
     display: flex;
@@ -49,22 +45,20 @@ footer {
 }
 
 
-.carousel-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .7rem;
-}
+/*---------CAROUSEL------------*/
+  
+  .carousel-track {
 
-.carousel-track {
     display: flex;
-    gap: .5rem;
+    padding: .5rem;
     transition: transform 0.5s ease-in-out;
-}
 
-.carousel-track img {
-    width: 7rem;
-    height: 4rem;
+}
+  
+  .carousel-track img {
+    width: 10rem;
+    height: 5rem;
     object-fit: cover;
     border-radius: .5rem;
-}
+  }
+
