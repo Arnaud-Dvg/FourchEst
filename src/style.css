@@ -5,61 +5,31 @@
 
 /* Import des fonts */
 
-@font-face {
-    font-family: Gotham-Bold;
-    src: url(./assetes/fonts/Gotham-Bold.otf);
-    font-family: Shrikhand-Regular;
-    src: url(./assetes/fonts/Shrikhand-Regular.ttf);
-}
-
-
-h1,
-h2,
-h3 {
-    font-family: "Shrikhand-Regular";
-    color: #191998;
-}
-
-body {
-    font-family: "Gotham-Bold";
-
-    a {
-        font-family: "Gotham-Bold";
-        color: black;
-    }
-}
 
 h1, h2, h3{
-    font-family:'shrikhand-Regular';
-    color:#191998;
+    font-family: 'roboto', Times, serif;
+    color:Black;
 }
 
 p{
-    font-family: 'Gotham-Bold';
+    font-family: 'Source Sans 3';
 }
 
 a{
     color:black;
 }
 
-
-.carousel-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: .7rem;
-  }
+/*---------CAROUSEL------------*/
   
   .carousel-track {
     display: flex;
-    gap: .5rem;
+    padding: .5rem;
     transition: transform 0.5s ease-in-out;
   }
   
   .carousel-track img {
-    width: 7rem;
-    height: 4rem;
+    width: 10rem;
+    height: 5rem;
     object-fit: cover;
     border-radius: .5rem;
   }
-
