@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="/src/style.css">
     <script src="restaurant.js"></script>
     <title>Fourch'Est</title>
     
@@ -23,152 +23,147 @@
     <main>
 
         <!-- Titre "Nos restaurants" -->
-        <h1>Nos restaurants</h1>
+        <h1 class="flex justify-center">Nos restaurants</h1>
     
             <!-- Barre de recherche -->
-        <section class="section1">
-            <div class="relative flex m-2 max-w-[300px] mx-auto">
-                <input
-                  type="search"
-                  class="relative m-0 block flex-auto rounded border border-solid border-black bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out placeholder:text-black focus:z-[3] focus:border-primary focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-black dark:text-black dark:placeholder:text-black dark:autofill:shadow-autofill dark:focus:border-primary"
-                  placeholder="Search"
-                  aria-label="Search"
-                  id="exampleFormControlInput2"
-                  aria-describedby="button-addon2" />
-                <span
-                  class="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-surface dark:border-black dark:text-black [&>svg]:h-5 [&>svg]:w-5"
-                  id="button-addon2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                  </svg>
-                </span>
-              </div>
-
-        </section>
+            <section class="flex justify-center my-4 mt-10">
+                <div class="relative flex w-60 border border-black rounded-md overflow-hidden">
+                    <input
+                        type="search"
+                        class="w-full px-3 py-2 text-black placeholder-black outline-none"
+                        placeholder="Rechercher..."
+                        aria-label="Search"
+                        id="searchInput"
+                    />
+                    <button class="px-3 bg-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+    
 
 <!-- Filtre -->
-<div class="relative">
-    <button
-        id="dropdownMenuButton"
-        class="flex items-center rounded bg-white px-6 py-2 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:bg-gray-200 focus:bg-gray-200 focus:outline-none">
-        Filtre
-        <span class="ml-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-            </svg>
-        </span>
-    </button>
 
-    <ul id="dropdownMenu"
-        class="absolute z-10 mt-2 hidden min-w-max list-none rounded-lg border border-gray-300 bg-white text-base shadow-lg">
-        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Végétarien</a></li>
-        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Cuisine locale</a></li>
-        <hr class="my-2 h-0 border border-t-0 border-gray-300" />
-        <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200" href="#">Choisir</a></li>
-    </ul>
+<div class="flex justify-center my-5 space-x-2 mb-10 mt-10">
+    <button class="px-6 py-2 bg-gray-200  focus:bg-[#FFC94F] active:bg-[#FFC94F] rounded-md ">Végétarien</button>
+    <button class="px-6 py-2 bg-gray-200  focus:bg-[#FFC94F] active:bg-[#FFC94F] rounded-md">Cuisine locale</button>
 </div>
 
         
         <!-- Liste des restaurants -->
-        <section class="section2 flex flex-col">
+        <section class="section2 flex flex-col md:grid grid-cols-3 gap-4">
 
             <!-- Article 1 1ere carte restautant img+titre -->
             <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html">
+                <img class="rounded-t-lg w-[220px] h-[146px] object-cover" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">Brasserie Excelsior</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Nancy</h2>
                 </div>
                 </div>
-                </article>
+            </article>
+            
             
             <!-- Article 2 2eme carte restaurant img+titre-->
             <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto2.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">Aux Armes de Strasbourg</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Strasbourg</h2>
                 </div>
                 </div>
                 </article>
 
             <!-- Article 3 3eme carte restaurant img+titre-->
            <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto3.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">La fine bulle</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Reims</h2>
                 </div>
                 </div>
                 </article>
 
             <!-- Article 4 4eme carte restautant img+titre -->
             <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto4.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">Le Lorrain</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Nancy</h2>
                 </div>
                 </div>
                 </article>
 
             <!-- Article 5 5eme carte restaurant img+titre-->
            <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto5.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">Au Vieux Strasbourg</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Strasbourg</h2>
                 </div>
                 </div>
                 </article>
             
             <!-- Article 6 6eme carte restaurant img+titre-->
             <article>
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto6.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">La Grande Georgette</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Metz</h2>
                 </div>
                 </div>
                 </article>
 
                  <!-- Article 7 7eme carte restautant img+titre -->
             <article> 
-                <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-                <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto7.jpg" alt="Restaurant La Choucroute" />
                 <div class="p-1 py-2 text-surface dark:to-black text-center">
-                <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
+                <h2 class="mb-2 text-xl font-medium leading-tight">Le Stan'</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Nancy</h2>
                 </div>
                 </div>
                 </article>
 
             <!-- Article 8 8eme carte restaurant img+titre-->
           <article>
-            <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-            <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
-            <div class="p-1 py-2 text-surface dark:to-black text-center">
-            <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
-            </div>
-            </div>
-            </article>
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto8.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">Caveau Des Rois</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Reims</h2>
+                </div>
+                </div>
+                </article>
 
             <!-- Article 9 9eme carte restaurant img+titre-->
            <article>
-            <div class="block rounded-lg bg-[#e4e6e8] shadow-secondary-1 w-55 m-auto h-auto max-w-sm shadow-lg dark:shadow-black/30 mb-10">
-            <a href="order.html"><img class="rounded-t-lg" src="/assetes/images/resto1.jpg" alt="Restaurant La Choucroute" />
-            <div class="p-1 py-2 text-surface dark:to-black text-center">
-            <h2 class="mb-2 text-xl font-medium leading-tight">La Choucroute Royal</h2></a>
-            </div>
-            </div>
-            </article>
+                <div class="block rounded-lg bg-white shadow-2xl w-[220px] h-auto max-w-sm mx-auto mb-10">
+                <a href="order.html"><img class="rounded-t-lg w-[220px] h-[146px]" src="/assetes/images/resto9.jpg" alt="Restaurant La Choucroute" />
+                <div class="p-1 py-2 text-surface dark:to-black text-center">
+                <h2 class="mb-2 text-xl font-medium leading-tight">L'Aloyau</h2></a>
+                <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-50 dark:via-black mt-0 mb-0" />
+                <h2>Metz</h2>
+                </div>
+                </div>
+                </article>
 
         </section>
 
