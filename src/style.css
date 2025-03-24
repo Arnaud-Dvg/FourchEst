@@ -42,6 +42,12 @@ a {
     color: black;
 }
 
+footer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .carousel-container {
     width: 100%;
