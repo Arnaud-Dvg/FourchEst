@@ -1,82 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
+  <link rel="icon" type="image/x-icon" href="assetes/images/favicon.ico">
+  <meta name="author" content="Wilders Grand'EST">
+  <link rel="stylesheet" href="./src/style.css">
   <title>Finaliser la commande - Brasserie Excelsior</title>
-  
+
 </head>
 
 
 
 <body class="min-h-screen flex flex-col">
 
-       <!---------------------------HEADER--------------------->
+  <!---------------------------HEADER--------------------->
 
-    <header>
-        <nav class="relative flex items-center justify-center">
-          <a href="account.html"
-            ><svg
-              class="h-8 text-white absolute top-2 right-0 w-10"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24">
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-              /></svg
-          ></a>
-  
-          <a href="index.html"><img
-            src="/assetes/images/FourchEst_Logo.png"
-            alt="logo Fourch'Est"
-            class="mt-5 mb-7 w-50 flex"
-          /></a>
-        </nav>
-      </header>
+  <header>
+    <nav class="relative flex items-center justify-center">
+      <a href="log.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg></a>
+
+      <a href="index.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"
+          class="mt-5 mb-7 w-50 flex" /></a>
+    </nav>
+  </header>
 
 
 
-       <!---------------------------MAIN--------------------->
+  <!---------------------------MAIN--------------------->
 
 
   <main class="flex-1">
 
 
-       <!---------------------------Bannière du restaurant--------------------->
-       <section class="relative">
+    <!---------------------------Bannière du restaurant--------------------->
+    <section class="relative">
       <img src="/assetes/images/resto1OrderP.jpg" alt="Restaurant Bannière" class="w-full h-56 object-cover" />
     </section>
 
 
-       <!---------------------------Nom du restaurant--------------------->
-       <section class="px-4 py-6">
+    <!---------------------------Nom du restaurant--------------------->
+    <section class="px-4 py-6">
       <h1 class="text-3xl text-center font-light">Brasserie Excelsior</h1>
     </section>
 
 
-       <!---------------------------Finaliser la commande--------------------->
-       <div class="container mx-auto px-4">
+    <!---------------------------Finaliser la commande--------------------->
+    <div class="container mx-auto px-4">
       <div class="bg-white shadow-2xl rounded-xl p-6">
         <h2 class="text-2xl font-semibold mb-4">Finaliser votre commande</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
 
-       <!---------------------------Récap de la commande--------------------->
-       <div>
+          <!---------------------------Récap de la commande--------------------->
+          <div>
             <h3 class="text-xl font-medium mb-2">Détails de la commande</h3>
             <ul id="orderDetails" class="space-y-4">
 
 
 
-       <!---------------------------Liste des articles--------------------->
-    </ul>
+              <!---------------------------Liste des articles--------------------->
+            </ul>
             <div class="border-t mt-4 pt-4">
               <div class="flex justify-between font-semibold">
                 <span>Total</span>
@@ -87,21 +78,24 @@
 
 
 
-       <!---------------------------Infos livraison et payement--------------------->
-       <div>
+          <!---------------------------Infos livraison et payement--------------------->
+          <div>
             <h3 class="text-xl font-medium mb-2">Informations de livraison</h3>
             <form class="p-4">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Nom complet</label>
-                <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Votre nom" />
+                <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                  placeholder="Votre nom" />
               </div>
               <div>
                 <label for="address" class="block text-sm font-medium text-gray-700">Adresse</label>
-                <input type="text" id="address" class="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Votre adresse" />
+                <input type="text" id="address" class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                  placeholder="Votre adresse" />
               </div>
               <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700">Téléphone</label>
-                <input type="tel" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Votre numéro" />
+                <input type="tel" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                  placeholder="Votre numéro" />
               </div>
               <div>
                 <label for="payment" class="block text-sm font-medium text-gray-700">Méthode de paiement</label>
@@ -113,8 +107,9 @@
                 </select>
               </div>
 
-       <!---------------------------Bouton de finalisation--------------------->
-       <button type="button" class="w-full bg-[#191968] text-white hover:text-black px-4 mt-3 py-2 rounded-full hover:bg-blue-300 transition">
+              <!---------------------------Bouton de finalisation--------------------->
+              <button type="button"
+                class="w-full bg-[#191968] text-white hover:text-black px-4 mt-3 py-2 rounded-full hover:bg-blue-300 transition">
                 Finaliser la commande
               </button>
             </form>
@@ -123,8 +118,8 @@
       </div>
 
 
-       <!---------------------------Lien pour retourner à la sélection (order.html)--------------------->
-       <div class="mt-6 text-center">
+      <!---------------------------Lien pour retourner à la sélection (order.html)--------------------->
+      <div class="mt-6 text-center">
         <a href="order.html" class="text-indigo-600 font-bold text-2xl
          hover:underline bg-white p-1 rounded-full ">
           Retour à la sélection
@@ -133,76 +128,49 @@
     </div>
   </main>
 
-     <!---------------------------Footer--------------------------->
+  <!---------------------------Footer--------------------------->
 
-     <footer class="text-black border-t border-black bg-white/95 py-4 
+  <footer class="text-black border-t border-black bg-white/95 py-4 
      ">
-       <div class="container mx-auto flex justify-between items-center px-4">
-         <!-- Copyright -->
-         <p class="text-xs font-medium">&copy; 2025</p>
-         <div>
-           <a class="text-xs" href="about.html">
-             <p class="flex justify-center">Mentions légales</p>
-           </a>
-         </div>
- 
-         <!-- Social Media Icons -->
-         <div class="flex space-x-4">
-           <a href="#" class="hover:text-blue-500">
-             <svg
-               class="w-6 h-6 text-gray-800"
-               aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg"
-               width="24"
-               height="24"
-               fill="currentColor"
-               viewBox="0 0 24 24"
-             >
-               <path
-                 fill-rule="evenodd"
-                 d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
-                 clip-rule="evenodd"
-               />
-             </svg>
-           </a>
-           <a href="#" class="hover:text-blue-400">
-             <svg
-               class="w-6 h-6 text-gray-800"
-               aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg"
-               width="24"
-               height="24"
-               fill="none"
-               viewBox="0 0 24 24"
-             >
-               <path
-                 fill="currentColor"
-                 fill-rule="evenodd"
-                 d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
-                 clip-rule="evenodd"
-               />
-             </svg>
-           </a>
-           <a href="#" class="hover:text-pink-500">
-             <svg
-               class="w-6 h-6 text-gray-800"
-               aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg"
-               width="24"
-               height="24"
-               fill="currentColor"
-               viewBox="0 0 24 24"
-             >
-               <path
-                 d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
-               />
-             </svg>
-           </a>
-         </div>
-       </div>
-     </footer>
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <!-- Copyright -->
+      <p class="text-xs font-medium">&copy; 2025</p>
+      <div>
+        <a class="text-xs" href="about.html">
+          <p class="flex justify-center">Mentions légales</p>
+        </a>
+      </div>
 
-       <!---------------------------Récupération du panier--------------------->
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-500">
+          <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-blue-400">
+          <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-pink-500">
+          <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!---------------------------Récupération du panier--------------------->
 
   <script>
 
@@ -226,12 +194,13 @@
     }
 
     //Mise à jour du total affiché
-    
+
     document.getElementById("orderTotal").textContent = total.toFixed(2) + "€";
   </script>
 
 
 
-<script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
+
 </html>

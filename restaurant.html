@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
+    <link rel="icon" type="image/x-icon" href="assetes/images/favicon.ico">
     <meta name="author" content="Wilders Grand'EST">
-    <meta name="description" content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
-    <link rel="icon" type="image/x-icon" href="assetes\images\favicon.ico">
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Fourch'Est - Nos Restaurant</title>
 
 </head>
@@ -16,12 +18,13 @@
 
     <header>
         <nav class="relative flex items-center justify-center">
-            <a href="account.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
+            <a href="log.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg></a>
-            <a href="index.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex" /></a>
+            <a href="index.html"><img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"
+                    class="mt-5 mb-7 w-50 flex" /></a>
         </nav>
     </header>
 
@@ -32,57 +35,58 @@
         <!-- Titre "Nos restaurants" -->
         <h1 class="flex justify-center text-3xl pt-2.5">Nos restaurants</h1>
 
-    
-
-           <!-- Barre de recherche -->
-<section class="flex justify-center my-4 mt-10">
-    <div class="relative flex w-60 border border-black rounded-md overflow-hidden">
-        <input
-            type="search"
-            class="w-full px-3 py-2 text-black placeholder-black outline-none"
-            placeholder="Rechercher..."
-            aria-label="Search"
-            id="searchInput"/>
-        
-    </div>
-</section>
-
-    
-
-<!-- Filtre -->
-<div class="flex flex-col items-center gap-4">
-<label class="flex items-center gap-2 cursor-pointer">
-    <input type="checkbox" id="vege" class="hidden peer">
-    <div class="w-6 h-6 border-2 border-gray-400 rounded-md peer-checked:bg-[#191998] peer-checked:border-[#FFC94F]"></div>
-    Végétarien
-</label>
-
-<label class="flex items-center gap-2 cursor-pointer">
-    <input type="checkbox" id="cuisine" class="hidden peer">
-    <div class="w-6 h-6 border-2 border-gray-400 rounded-md peer-checked:bg-[#191998] peer-checked:border-[#FFC94F]"></div>
-    Cuisine Locale
-</label>
-</div>
 
 
+        <!-- Barre de recherche -->
+        <section class="flex justify-center my-4 mt-10">
+            <div class="relative flex w-60 border border-black rounded-md overflow-hidden">
+                <input type="search" class="w-full px-3 py-2 text-black placeholder-black outline-none"
+                    placeholder="Rechercher..." aria-label="Search" id="searchInput" />
+
+            </div>
+        </section>
+
+
+
+        <!-- Filtre -->
+        <div class="flex flex-col items-center gap-4">
+            <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="vege" class="hidden peer">
+                <div
+                    class="w-6 h-6 border-2 border-gray-400 rounded-md peer-checked:bg-[#191998] peer-checked:border-[#FFC94F]">
+                </div>
+                Végétarien
+            </label>
+
+            <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="cuisine" class="hidden peer">
+                <div
+                    class="w-6 h-6 border-2 border-gray-400 rounded-md peer-checked:bg-[#191998] peer-checked:border-[#FFC94F]">
+                </div>
+                Cuisine Locale
+            </label>
+        </div>
 
 
 
 
-<div class="flex justify-center my-5 space-x-2 mb-10 mt-10 flex-wrap">
-    <button type="submit" class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md">
-    <select name="city" id="city-select">
-        <option value="Ville">Toutes les villes</option>
-        <option value="Nancy">Nancy</option>
-        <option value="Reims">Reims</option>
-        <option value="Strasbourg">Strasbourg</option>
-        <option value="Metz">Metz</option>
-    </select></button>
-    <button type="submit" id="valider" class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md ">Valider</button>
 
-</div>
 
-      
+        <div class="flex justify-center my-5 space-x-2 mb-10 mt-10 flex-wrap">
+            <button type="submit" class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md">
+                <select name="city" id="city-select">
+                    <option value="Ville">Toutes les villes</option>
+                    <option value="Nancy">Nancy</option>
+                    <option value="Reims">Reims</option>
+                    <option value="Strasbourg">Strasbourg</option>
+                    <option value="Metz">Metz</option>
+                </select></button>
+            <button type="submit" id="valider"
+                class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md ">Valider</button>
+
+        </div>
+
+
         <!-- Liste des restaurants -->
         <div id="cardContainer" class="section2 flex flex-col md:grid grid-cols-3 gap-4">
         </div>
@@ -149,8 +153,8 @@
                 }
             });
         });
-      </script>
-          <script src="restaurant1.js"></script>
+    </script>
+    <script src="restaurant1.js"></script>
 
 
 </body>
