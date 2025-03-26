@@ -7,46 +7,49 @@
 /* Import des fonts */
 
 
-h2, h3, p{
- font-family: nunito;
- color: #191998;
+h2,
+h3,
+p {
+  font-family: nunito;
+  color: #191998;
 }
 
 h1 {
-    font-family: shrikhand;
-    color: #191998;
+  font-family: shrikhand;
+  color: #191998;
 }
 
 body {
-    background-image: url("/assetes/images/bg-mobile.png");
-    background-size: 100% 2566px;
+  background-image: url("/assetes/images/bg-mobile.png");
+  background-size: 100% 2566px;
 }
 
-
+.blackText {
+  color: black;
+}
 
 
 
 footer {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 /*---------CAROUSEL------------*/
-  
-  .carousel-track {
 
-    display: flex;
-    padding: .5rem;
-    transition: transform 0.5s ease-in-out;
+.carousel-track {
+
+  display: flex;
+  padding: .5rem;
+  transition: transform 0.5s ease-in-out;
 
 }
-  
-  .carousel-track img {
-    width: 10rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: .5rem;
-  }
 
+.carousel-track img {
+  width: 10rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: .5rem;
+}
