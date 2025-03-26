@@ -40,195 +40,171 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-- main -->
 
 
-    <main>
+    <main class="bg-gray-100 pb-16">
 
-        <!-- Nom resto sélectionné & bannière -->
-
-        <section class="flex justify-center items-center">
-            <img src="/assetes/images/resto1.jpg" alt="banière du restaurant sélectionné" class=" lg:w-3xl lg:h-80 e">
-        </section>
-        <section>
-            <h1 class="flex justify-center p-6 text-xl lg:text-5xl lg:p-4">Brasserie Excelsior</h1>
-            <!--WIDTH A ENLEVER !!-->
-        </section>
-
-        <!-- Emplacement des plats sélectionnables -->
-        <section class="flex justify-center bg-white">
-            <section class=" grid grid-cols-2 gap-7 lg:grid-cols-3">
-
-                <!-- 1 plat = 1 article -->
-
-                <article class="bg-zinc-300 shadow-2xl p-1.5 pb-2 w-35 lg:w-80 rounded-xl">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Bretzels</h2>
-                    <img src="/assetes/images/bretzel.jpg" alt="bretzels" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p class=" text-xs lg:text-base">Le fameux Bretzel Alsacien</p>
-                        <p> Prix: 3.50€</p>
-                        <button value="3.50" name="Bretzels"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-
-                <article class="bg-zinc-300 shadow-lg p-1.5  w-35 lg:w-80 rounded-xl ">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Burgers</h2>
-                    <img src="/assetes/images/burger.jpg" alt="burgers" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p>Le classique Américain</p>
-                        <p>11.80€</p>
-                        <button value="11.80" name="Burgers"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-
-                <article class="bg-zinc-300 shadow-lg p-1.5  pb-2 w-35 lg:w-80 rounded-xl ">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Choucroute</h2>
-                    <img src="/assetes/images/choucroute.jpg" alt="choucroute" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p>Pas attirante mais excellente</p>
-                        <p>16.50€</p>
-                        <button value="16.50" name="Choucroute"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-
-                <article class="bg-zinc-300 shadow-lg p-1.5  pb-2 w-35 lg:w-80 rounded-xl ">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Flamekueche</h2>
-                    <img src="/assetes/images/flam.jpg" alt="flamekueche" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p>La tarte Flambée...</p>
-                        <p>7.80€</p>
-                        <button value="7.80" name="Flamekueche"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-
-                <article class="bg-zinc-300 shadow-lg p-1.5 pb-2 w-35 lg:w-80 rounded-xl ">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Kebab</h2>
-                    <img src="/assetes/images/kebab.jpg" alt="kebab" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p>Le kébab préféré de Yavuz</p>
-                        <p>8.50€</p>
-                        <button value="8.50" name="Kebab"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-
-                <article class="bg-zinc-300 shadow-lg p-1.5 pb-2  w-35 lg:w-80 rounded-xl ">
-                    <h2 class="flex justify-center text-xl lg:text-2xl ">Macaron</h2>
-                    <img src="/assetes/images/macaron.jpg" alt="macaron" class="rounded-2xl">
-                    <section class="flex flex-col items-center">
-                        <p>La SEULE specialitée Nancéene</p>
-                        <p>6.60€</p>
-                        <button value="6.60" name="Macarons"
-                            class="buttonAdd bg-white p-2 rounded-full justify-center transition delay-150 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 "
-                            type="button">Ajouter au panier</button>
-                    </section>
-                </article>
-            </section>
-        </section>
-
-        <!-- Section panier -->
-        <section>
-
-            <!-- Affichage logo -->
-            <section>
-                <img src="/assetes/images/panier.png" alt="icône panier" width="20px">
-                <p class="itemNumber">0</p>
-            </section>
-
-            <!-- Liste des plats commandés -->
-            <section>
-
-                <!-- ul A MASQUER EN VERSION MOBILE -->
-                <p>Plats commandés :</p>
-                <ul class="mealList">
-                </ul>
-                <p>Total :</p>
-                <p class="totalPrice"></p>
-                <p>€</p>
-                <button type="button">Commander</button>
-            </section>
-        </section>
-
-
+      <!-- Bannière du restaurant -->
+      <section class="relative">
+        <img src="/assetes/images/resto1OrderP.jpg" alt="Restaurant banner" class="w-full h-56 object-cover">
+      </section>
+      
+      <!-- Nom du Restaurant -->
+      <section class="px-4 py-6">
+        <h1 class="text-3xl text-center font-light">Brasserie Excelsior</h1>
+      </section>
+    
+      <!-- Liste des plats -->
+      <section class="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/bretzel.jpg" alt="Bretzel" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Bretzel</h2>
+                  <p class="text-gray-500 font-bold text-sm">3.50€</p>
+                  <p class="text-gray-700 text-sm">Un incontournable de la tradition, croûte dorée et cœur moelleux.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Bretzel" data-price="3.50">Ajouter</button>
+              </section>
+          </article>
+          
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/burger.jpg" alt="Burger" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Burger</h2>
+                  <p class="text-gray-500 font-bold text-sm">5.50€</p>
+                  <p class="text-gray-700 text-sm">Soft bun, savory meat, and fresh ingredients.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Burger" data-price="5.50">Ajouter</button>
+              </section>
+          </article>
+          
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/choucroute.jpg" alt="Sauerkraut" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Choucroute</h2>
+                  <p class="text-gray-500 font-bold text-sm">10.00€</p>
+                  <p class="text-gray-700 text-sm">Choucroute alsacienne, généreuse et savoureuse.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Choucroute" data-price="10.00">Ajouter</button>
+              </section>
+          </article>
+          
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/flam.jpg" alt="Flammekueche" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Flammekueche</h2>
+                  <p class="text-gray-500 font-bold text-sm">10.50€</p>
+                  <p class="text-gray-700 text-sm">Fine et croustillante, garnie de crème, lardons et oignons.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Flammekueche" data-price="10.50">Ajouter</button>
+              </section>
+          </article>
+          
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/kebab.jpg" alt="Kebab" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Kebab</h2>
+                  <p class="text-gray-500 text-sm font-bold">5.50€</p>
+                  <p class="text-gray-700 text-sm">Viande grillée, légumes frais et sauce gourmande.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Kebab" data-price="5.50">Ajouter</button>
+              </section>
+          </article>
+    
+          <article class="flex bg-white p-4 rounded-xl shadow-lg gap-4 items-center">
+              <img src="/assetes/images/pates.jpg" alt="Bolognese Pasta" class="w-24 h-24 rounded-lg object-cover">
+              <section class="flex-1">
+                  <h2 class="text-lg font-bold">Pâtes Bolognaise</h2>
+                  <p class="text-gray-500 text-sm font-bold">10.50€</p>
+                  <p class="text-gray-700 text-sm">Viande fraiche, pâtes fraiches, parmesans et sauce tomates.</p>
+                  <button class="addMeal bg-[#191968] text-white px-4 py-2 rounded-full mt-2 hover:bg-blue-300 transition" data-name="Pâtes Bolognaise" data-price="10.50">Ajouter</button>
+              </section>
+          </article>
+      </section>
+    
+      <!-- Panier Flottant -->
+      <section class="fixed bottom-15 right-4 bg-white shadow-lg rounded-full px-6 py-3 flex items-center gap-2 cursor-pointer" id="cartButton">
+          <span class=" text-white bg-[#191998] w-8 h-8 flex items-center justify-center rounded-full text-sm font-bold" id="itemCount">0</span>
+          <p class="text-gray-700 font-bold">Voir le Panier</p>
+      </section>
+    
+      <!-- Pop-Up Panier -->
+      <section id="cartPopup" class="fixed inset-0 bg-white/80 bg-opacity-50 hidden flex justify-center items-center ">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+              <button id="closeCart" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
+              <h2 class="text-xl font-bold mb-4">Votre panier</h2>
+              <ul id="mealList" class="mb-4"></ul>
+              <p class="font-bold">Total: <span id="totalPrice">0</span>€</p>
+          </div>
+      </section>
     </main>
+  
+ 
 
-    <!-- FOOTER -->
     <footer
-      class="text-black border-t border-black bg-white bg-opacity-50 py-4"
-    >
-      <div class="container mx-auto flex justify-between items-center px-4">
-        <!-- Copyright -->
-        <p class="text-xs font-medium">&copy; 2025</p>
-        <div>
-          <a class="text-xs" href="about.html">
-            <p class="flex justify-center">Mentions légales</p>
-          </a>
-        </div>
-
-        <!-- Social Media Icons -->
-        <div class="flex space-x-4">
-          <a href="#" class="hover:text-blue-500">
-            <svg
-              class="w-6 h-6 text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-          <a href="#" class="hover:text-blue-400">
-            <svg
-              class="w-6 h-6 text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                fill-rule="evenodd"
-                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-          <a href="#" class="hover:text-pink-500">
-            <svg
-              class="w-6 h-6 text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
-              />
-            </svg>
-          </a>
-        </div>
+    class="text-black border-t border-black bg-white bg-opacity-50 py-4"
+  >
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <!-- Copyright -->
+      <p class="text-xs font-medium">&copy; 2025</p>
+      <div>
+        <a class="text-xs" href="about.html">
+          <p class="flex justify-center">Mentions légales</p>
+        </a>
       </div>
-    </footer>
+
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-500">
+          <svg
+            class="w-6 h-6 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-blue-400">
+          <svg
+            class="w-6 h-6 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-pink-500">
+          <svg
+            class="w-6 h-6 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 
     <!-- SCRIPT-->
     <script src="./order.js"></script>
