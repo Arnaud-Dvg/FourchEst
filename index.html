@@ -8,21 +8,14 @@
       content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est"
     />
     <meta name="author" content="Wilders Grand'EST" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-    </style>
     <link rel="stylesheet" href="./src/style.css" />
     <title>FourchEst | HomePage</title>
   </head>
 
-
-  <body
-    class="bg-cover bg-center object-contain"
-    style="background-image: url('/assetes/images/mobile_background.png')"
-  >
+  <body>
     <header>
       <nav class="relative flex items-center justify-center">
-        <a href="account.html"
+        <a class="focus:" href="log.html"
           ><svg
             class="h-8 text-white absolute top-2 right-0 w-10"
             aria-hidden="true"
@@ -54,8 +47,12 @@
     </header>
 
     <!---------------------------Bar de recherche--------------------->
+    <section class="md:relative md:top-10 md:flex md:justify-around">
+    <img src="assetes/images/macaronBanniere.png" alt="images du macaron" class="hidden md:block md:w-55 md:h-60 md:mr-70"> 
+    <img src="assetes/images/burgerdesktop.png" alt="image du burger" class="hidden md:block md:w-55 md:h-60 md:ml-50">
+    </section>
 
-    <form class="my-5 mx-7">
+    <form class="relative md:bottom-30 my-5 mx-7 md:mx-50 lg:mx-100">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only"
@@ -82,16 +79,18 @@
           </svg>
         </div>
         <select
-          type="search"
           id="default-search"
-          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 appearance-none"
-          placeholder="Position..."
+          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50/95 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 appearance-none transition duration-200"
+          aria-label="Select a position"
           required
         >
+          <option value="" disabled selected hidden>
+            Select a position...
+          </option>
           <option value="metz">Metz</option>
           <option value="nancy">Nancy</option>
           <option value="strasbourg">Strasbourg</option>
-          <option value=""></option>
+          <option value="strasbourg">Reims</option>
         </select>
 
         <button
@@ -106,7 +105,7 @@
     <!---------------------------CAROUSEL--------------------------->
 
     <div
-      class="carousel-container w-full flex flex-col justify-center gap-0.7 pt-10"
+      class="carousel-container w-full flex flex-col justify-center gap-0.7 "
     >
       <div
         class="carousel-track flex gap-0.5 transition-transform duration-0.5r ease-in-out"
@@ -115,9 +114,11 @@
 
     <!---------------------------Cartes----------------------------->
 
-    <section class="flex flex-col">
+    <section
+      class="flex flex-col md:grid md:grid-cols-3 lg:grid lg:grid-cols-3"
+    >
       <div
-        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
       >
         <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
           Livraison rapide
@@ -125,7 +126,7 @@
         <div class="flex justify-center p-1">
           <img
             src="assetes/images/livraison rapide.png"
-            class="w-32 h-32 rounded-xl object-contain"
+            class="w-32 h-32 rounded-2xl object-contain"
             alt="Livraison rapide"
           />
         </div>
@@ -139,9 +140,9 @@
       </div>
 
       <div
-        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
       >
-        <h2 class="text-lg font-bold bg-white text-gray-800 mb-2 text-center pt-5">
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
           Livraison rapide
         </h2>
         <div class="flex justify-center p-1">
@@ -161,15 +162,15 @@
       </div>
 
       <div
-        class="max-w-sm m-10 mt-15 bg-transparent border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden"
       >
-        <h2 class="text-lg font-bold bg-white text-gray-800 mb-2 text-center pt-5">
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
           Livraison rapide
         </h2>
         <div class="flex justify-center pt-1">
           <img
             src="assetes/images/platslocaux.png"
-            class="w-70 h-32 rounded-xl object-contain"
+            class="w-50 h-32 rounded-2xl"
             alt="Livraison rapide"
           />
         </div>
@@ -183,14 +184,178 @@
       </div>
     </section>
 
+    <!---------------------------Testimonials--------------------------->
+
+    <section class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-2">
+      <div class="m-10 mt-10">
+        
+        <div
+          class="bg-gradient-to-r from-blue-900 to-white/95 rounded-xl shadow-2xl p-4 text-white"
+        >
+          <div class="bg-white opacity-10 transform -skew-x-12"></div>
+          <div class="relative z-10">
+            <svg
+              class="w-5 h-5 mb-2 text-blue-300"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+            <p class="text-lg font-medium">"Le Service est top !"</p>
+            <div class="mb-2 flex items-center">
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex items-center">
+              <img
+                src=""
+                alt="Avatar"
+                class="w-12 h-12 rounded-full mr-4 border-2 border-purple-300"
+              />
+              <div>
+                <h4 class="font-semibold">David Robert Joseph Beckham</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-10 mt-10">
+        <div
+          class="bg-gradient-to-r from-blue-600 to-white/95 border-gray-200 rounded-xl shadow-2xl p-4 text-white"
+        >
+          <div class="bg-white opacity-10 transform -skew-x-12"></div>
+          <div class="relative z-10">
+            <svg
+              class="w-5 h-5 mb-2 text-blue-300"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+              />
+            </svg>
+            <p class="text-lg font-medium">
+              "Oi ! The sausage is good, Great dilevery fellas"
+            </p>
+            <div class="mb-2 flex items-center">
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="h-5 w-5 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex items-center">
+              <img
+                src=""
+                alt="Avatar"
+                class="w-12 h-12 rounded-full mr-4 border-2 border-purple-300"
+              />
+              <div>
+                <h4 class="font-semibold">Donald John Trump</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!---------------------------Footer--------------------------->
 
-    <footer
-      class="text-black border-t border-black bg-white bg-opacity-50 py-4"
-    >
+    <footer class="text-black border-t border-black bg-white/95 py-4">
       <div class="container mx-auto flex justify-between items-center px-4">
         <!-- Copyright -->
-        <p class="text-sm font-medium">&copy; 2025</p>
+        <p class="text-xs font-medium">&copy; 2025</p>
+        <div>
+          <a class="text-xs" href="about.html">
+            <p class="flex justify-center">Mentions légales</p>
+          </a>
+        </div>
 
         <!-- Social Media Icons -->
         <div class="flex space-x-4">

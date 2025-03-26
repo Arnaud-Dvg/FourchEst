@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shrikhand&display=swap');
 @import 'tailwindcss';
 
 
@@ -5,60 +6,50 @@
 
 /* Import des fonts */
 
-@font-face {
-    font-family: Gotham-Bold;
-    src: url(/assetes/fonts/Gotham-Bold.otf);
-    font-family: Shrikhand-Regular;
-    src: url(./assetes/fonts/Shrikhand-Regular.ttf);
+
+h2,
+h3,
+p {
+  font-family: nunito;
+  color: #191998;
 }
 
-
-h1,
-h2,
-h3 {
-    font-family: "Shrikhand-Regular";
-    color: #191998;
+h1 {
+  font-family: shrikhand;
+  color: #191998;
 }
 
 body {
-    font-family: "Gotham-Bold";
-
-    background-image: url("/assetes/images/bg-mobile.png");
-    background-size: cover;
-    background-position: center;
-    /* center à supprimer ? Aspect différent selon les pages*/
-
-    a {
-        font-family: "Gotham-Bold";
-        color: black;
-    }
+  background-image: url("/assetes/images/bg-mobile.png");
+  background-size: 100% 2566px;
 }
 
-p {
-    font-family: "Gotham-Bold";
+.blackText {
+  color: black;
 }
+
+
 
 footer {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 /*---------CAROUSEL------------*/
-  
-  .carousel-track {
 
-    display: flex;
-    padding: .5rem;
-    transition: transform 0.5s ease-in-out;
+.carousel-track {
+
+  display: flex;
+  padding: .5rem;
+  transition: transform 0.5s ease-in-out;
 
 }
-  
-  .carousel-track img {
-    width: 10rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: .5rem;
-  }
 
+.carousel-track img {
+  width: 10rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: .5rem;
+}

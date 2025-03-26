@@ -12,19 +12,24 @@
     <!-- HEADER -->
     <header>
 
-        <nav class="relative flex items-center justify-center ">
-            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex">
-            <a href="account.html"><img src="/assetes/images/SignUp.jpg" alt="Sign up/Login"
-                    class="absolute top-2 right-0 w-10 rounded-full"></a>
+        <nav class="relative flex items-center justify-center">
+            <a href="account.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg></a>
+
+            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex" />
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="flex flex-col text-center mb-30">
+    <!--MAIN -->
+    <main class="flex flex-col text-center mb-20 mt-5">
 
         <!-- Section présentation de l'entreprise -->
         <section>
-            <h1 class="text-[#191998] bg-white border-b-1 border-b-black mb-8 mx-10 text-2xl md:mx-50">Qui sommes-nous ?
+            <h1 class="text-[#191998] bg-white/90 border-b-1 border-b-black mb-8 mx-10 text-2xl md:mx-50">Qui
+                sommes-nous ?
             </h1>
 
             <!-- Section "Qui sommes nous"-->
@@ -32,7 +37,7 @@
 
                 <!-- Section photos -->
                 <section
-                    class="bg-[#e4e6e8] rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 flex flex-col items-center pt-5">
+                    class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 flex flex-col items-center pt-5">
                     <h2 class="font-bold">Découvrez l'équipe</h2>
 
                     <!-- Liste des articles -->
@@ -40,40 +45,43 @@
 
                         <!-- 1 article = 1 photo + nom + job title-->
                         <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
-                            <img class="rounded-full" src="https://www.gravatar.com/avatar/87622?d=retro&s=300"
-                                alt="Photo de l'équipe" width="100px">
-                            <p>Arnaud D.</p>
-                            <p>Directeur artistique</p>
+                            <img class="rounded-full border-[#ffc94f] border-4 mb-2"
+                                src="https://www.gravatar.com/avatar/87622?d=retro&s=300" alt="Photo de l'équipe"
+                                width="100px">
+                            <p class="font-bold">Arnaud D.</p>
+                            <p class="blackText">Directeur artistique</p>
                         </article>
 
                         <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
-                            <img class="rounded-full" src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
+                            <img class="rounded-full border-[#ffc94f] border-4 mb-2"
+                                src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
                                 alt="Photo de l'équipe" width="100px">
-                            <p>Arnaud D.</p>
-                            <p>Consultant JS</p>
+                            <p class="font-bold">David dM.</p>
+                            <p class="blackText">Consultant JS</p>
                         </article>
 
                         <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
-                            <img class="rounded-full"
+                            <img class="rounded-full border-[#ffc94f] border-4 mb-2"
                                 src="https://storage.googleapis.com/assets_upload_prod/R00FVsszSGz3JO1EYfsAMh6n7bMS0zOA.jpg"
                                 alt="Photo de l'équipe" width="100px">
-                            <p>Arnaud D.</p>
-                            <p>Happiness manager</p>
+                            <p class="font-bold">Guillaume Z.</p>
+                            <p class="blackText">Happiness manager</p>
                         </article>
 
                         <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
-                            <img class="rounded-full" src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300"
-                                alt="Photo de l'équipe" width="100px">
-                            <p>Arnaud D.</p>
-                            <p>Expert framework</p>
+                            <img class="rounded-full border-[#ffc94f] border-4 mb-2"
+                                src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300" alt="Photo de l'équipe"
+                                width="100px">
+                            <p class="font-bold">Quentin B.</p>
+                            <p class="blackText">Expert framework</p>
                         </article>
 
                         <article class="flex flex-col items-center my-6 w-[12rem] md:w-[16rem]">
-                            <img class="rounded-full"
+                            <img class="rounded-full border-[#ffc94f] border-4 mb-2"
                                 src="https://storage.googleapis.com/assets_upload_prod/DzveiDPFXjTyaxR8CrX49JG6pb03qPu6.jpg"
                                 alt="Photo de l'équipe" width="100px">
-                            <p>Arnaud D.</p>
-                            <p>Chef de projet</p>
+                            <p class="font-bold">Rahmoun D.</p>
+                            <p class="blackText">Chef de projet</p>
                         </article>
                     </section>
                 </section>
@@ -82,31 +90,35 @@
                 <section class="flex flex-col gap-5 md:w-6xl">
 
                     <!-- Section notre Histoire -->
-                    <section class="bg-[#e4e6e8] rounded-lg shadow-secondary-1 py-5 shadow-lg dark:shadow-black/30">
+                    <section
+                        class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 py-5 shadow-lg dark:shadow-black/30">
                         <h2 class="font-bold mb-5">Notre histoire</h2>
 
-                        <p class="mx-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                        <p class="mx-10 blackText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
                             assumenda
                             consequuntur
                             nisi
                             quae
-                            sapiente, deserunt saepe quibusdam laborum at in magni veniam optio itaque mollitia sequi
+                            sapiente, deserunt saepe quibusdam laborum at in magni veniam optio itaque mollitia
+                            sequi
                             nihil
                             asperiores nemo cumque.
-                            Tempora incidunt quas sit veniam quasi suscipit at! Laborum culpa qui eius ducimus sint in
+                            Tempora incidunt quas sit veniam quasi suscipit at! Laborum culpa qui eius ducimus sint
+                            in
                             dolorem
                             doloribus, tempore cumque, voluptatibus nihil maiores ipsa modi nulla praesentium nam
                             necessitatibus! In, beatae?
                             Vitae tempore pariatur mollitia ratione iusto quidem quia praesentium maxime distinctio
                             voluptates
-                            delectus quam odio debitis a natus nesciunt, laborum, saepe suscipit ipsum incidunt atque
+                            delectus quam odio debitis a natus nesciunt, laborum, saepe suscipit ipsum incidunt
+                            atque
                             aliquam
                             modi aspernatur perspiciatis. Obcaecati?</p>
                     </section>
 
                     <!-- Section contact -->
                     <section
-                        class="bg-[#e4e6e8] rounded-lg shadow-secondary-1 flex flex-col gap-y-5 py-5 shadow-lg dark:shadow-black/30">
+                        class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 flex flex-col gap-y-5 py-5 shadow-lg dark:shadow-black/30">
                         <h2 class="font-bold mb-5">Nous contacter</h2>
 
                         <!-- Nom prénom -->
@@ -138,7 +150,7 @@
                             <textarea class="rounded-lg bg-white border-1 border-black text-center" id="message"
                                 name="message" rows="5" cols="1" maxlength="500" wrap
                                 placeholder="Tapez votre message ici..."></textarea>
-                            <input class="rounded-lg bg-white border-1 border-black" type="submit" value="Envoyer">
+                            <input class="rounded-lg bg-[#ffc94f] border-black" type="submit" value="Envoyer">
                         </form>
 
                     </section>
@@ -147,31 +159,46 @@
         </section>
 
         <!-- Section mentions légales -->
-        <section>
-            <h1 class="text-[#191998] bg-white border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">Mentions
+        <section class="mt-10">
+            <h1 class="bg-white/90 text-[#191998] border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl md:mx-50">
+                Mentions
                 légales</h1>
-            <section class="bg-[#e4e6e8] rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 py-5 md:mx-20">
+            <section
+                class="bg-[#e4e6e8]/95 rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 py-5 mx-5 md:mx-20">
                 <section class="flex flex-col mx-10 gap-y-5">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel iusto officiis est
+                    <p class="blackText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel iusto
+                        officiis est
                         deleniti enim odit fuga cumque? Esse odio adipisci iure velit voluptate? Odio voluptatibus
                         voluptates repellat officia provident..</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt consequuntur sapiente
-                        dolor, minus rerum saepe cumque labore perferendis harum ea. A expedita nostrum in vel, minus
+                    <p class="blackText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt
+                        consequuntur
+                        sapiente
+                        dolor, minus rerum saepe cumque labore perferendis harum ea. A expedita nostrum in vel,
+                        minus
                         laudantium dicta quae.
                         Quas eaque voluptatem tempora sint possimus temporibus eos iusto optio error incidunt! Cum
-                        nesciunt non, accusamus est libero eum unde voluptatem nemo, ducimus saepe quam maiores numquam
+                        nesciunt non, accusamus est libero eum unde voluptatem nemo, ducimus saepe quam maiores
+                        numquam
                         sunt iure atque.
-                        Tempore quos sunt earum, ea deserunt voluptatum? Debitis nam modi officia natus totam eius omnis
-                        laborum error, molestiae repellendus maiores? Nisi, expedita neque illum maiores doloribus nulla
+                        Tempore quos sunt earum, ea deserunt voluptatum? Debitis nam modi officia natus totam eius
+                        omnis
+                        laborum error, molestiae repellendus maiores? Nisi, expedita neque illum maiores doloribus
+                        nulla
                         dignissimos odio eveniet..</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore repudiandae, harum optio
-                        culpa cumque deserunt impedit commodi id placeat nisi animi iusto repellat, ipsa ut. Doloribus
+                    <p class="blackText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore
+                        repudiandae, harum
+                        optio
+                        culpa cumque deserunt impedit commodi id placeat nisi animi iusto repellat, ipsa ut.
+                        Doloribus
                         officia debitis facere.
                         Nam facilis in sunt fuga repudiandae quo reprehenderit, sint explicabo similique, unde
-                        asperiores doloremque ipsum ab tempora aperiam! Reprehenderit maxime nemo doloribus temporibus
+                        asperiores doloremque ipsum ab tempora aperiam! Reprehenderit maxime nemo doloribus
+                        temporibus
                         possimus sapiente nisi aspernatur asperiores perspiciatis ipsam.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore libero ab
-                        consequuntur animi? Reiciendis, ea rem ex expedita dignissimos ratione sequi. Aspernatur animi
+                    <p class="blackText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore
+                        libero ab
+                        consequuntur animi? Reiciendis, ea rem ex expedita dignissimos ratione sequi. Aspernatur
+                        animi
                         quis maiores, voluptas odio ratione a?.</p>
                 </section>
             </section>
@@ -180,30 +207,43 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="text-black border-t border-black bg-white bg-opacity-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Copyright -->
+            <p class="text-xs font-medium">&copy; 2025</p>
+            <div>
+                <a class="text-xs" href="about.html">
+                    <p class="flex justify-center">Mentions légales</p>
+                </a>
+            </div>
 
-        <!-- Logo + copyright-->
-        <section>
-            <img src="/assetes/images/FourchEst_Logo.png" alt="Logo de la société" width="100px">
-            <p>©2025 Fourch'Est</p>
-        </section>
-
-        <!-- Mentions légales -->
-        <section>
-            <a href="about.html">
-                <p>Mentions légales</p>
-            </a>
-            <a href="about.html">
-                <p>Nous contacter</p>
-            </a>
-        </section>
-
-        <!-- Logo réseaux-->
-        <section>
-            <a href="index.html"><img src="/assetes/images/insta logo.png" alt="instagram" width="20px"></a>
-            <a href="index.html"><img src="/assetes/images/twitter logo.png" alt="twitter" width="20px"></a>
-            <a href="index.html"><img src="/assetes/images/facebook logo.png" alt="facebook" width="20px"></a>
-        </section>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-500">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-blue-400">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-pink-500">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <!-- SCRIPT-->
