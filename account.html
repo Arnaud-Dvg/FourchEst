@@ -4,45 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est">
+    <meta name="description"
+        content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
+    <link rel="icon" type="image/x-icon" href="assetes\images\favicon.ico">
     <meta name="author" content="Wilders Grand'EST">
     <link rel="stylesheet" href="./src/style.css">
     <title>Account</title>
 </head>
 
-<body>
+<body class="min-h-screen flex flex-col">
 
     <header>
         <nav class="relative flex items-center justify-center">
-            <a href="account.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
+            <a href="index.html">
+                <svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                </svg></a>
+                        d="M15 12H3m0 0 4-4m-4 4 4 4M21 16V8a2 2 0 0 0-2-2h-4" />
+                </svg>
+            </a>
 
-            <img src="/assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex" />
+            <a href="index.html>"><img src="./assetes/images/FourchEst_Logo.png" alt="logo Fourch'Est"
+                    class="mt-5 mb-7 w-50 flex" /></a>
         </nav>
 
     </header>
-  
-    <!-- Avatar et Nom du titulaire du compte -->
-    <main>
 
+    <main class="flex-1">
+
+        <!-- Avatar + nom titulaire compte -->
         <section class="flex flex-col items-center">
+            <!-- Avatar titulaire compte -->
             <span class="relative inline-block">
                 <img src="./assetes/images/avatar.jpg" class="object-cover w-35 h-35 rounded-full shadow-black" pt-5 />
                 <span
                     class="absolute animate-pulse top-0 right-0 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></span>
             </span>
-
+            <!-- Nom titulaire compte -->
             <h1 class="pt-5 pb-5">Yavuz Kutuk</h1>
         </section>
 
-        <!-- Liste restaurants favorits en cliquant sur l'un des lien ca ammenera au panier existant-->
-        <!-- Conteneur des cartes -->
+        <!-- Liste restaurants favorits en cliquant sur l'un des lien ca ammenera au panier existant -->
+        <!-- Conteneur des cartes générées en JS -->
         <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
             <div class="bg-gray-300 flex justify-center p-5">
-                <h2>Restaurants Favoris</h2>
+                <h2 class="text-2xl font-semibold">Restaurants Favoris</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10" id="cards">
                 <!-- Les cartes seront générées ici avec JavaScript -->
@@ -52,21 +58,26 @@
         </div>
         </section>
 
+        <!-- Liste des dernieres commandes en cliquant sur l'un des lien ca ammenera au panier existant -->
         <!-- Section Dernières Commandes -->
+        <!-- Titre -->
         <section class="bg-gray-300 flex justify-center py-8">
             <h2 class="text-2xl font-semibold">Dernières commandes</h2>
         </section>
+        <!-- Corps généré en JS -->
         <div id="cards-container"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 py-8 w-full"></div>
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 py-8 w-full">
+            <!-- Les cartes seront générées ici avec JS -->
+        </div>
 
-        <!-- Button to Download PDF -->
+        <!-- Bouton telecharger en .PDF -->
         <div class="flex justify-center mt-4">
             <button id="download-btn" class="py-2 px-6 bg-gray-800 text-white text-base font-medium hover:bg-black">
                 Télécharger la facture en PDF
             </button>
         </div>
 
-        <!-- Button to See All Orders -->
+        <!-- Bouton voir toutes les commandes -->
         <div class="flex justify-center mt-4 p-5">
             <button id="view-all-orders-btn"
                 class="py-2 px-6 bg-indigo-600 text-white text-base font-medium hover:bg-indigo-700">
@@ -75,10 +86,11 @@
         </div>
 
         <!-- Section Informations Personnelles -->
-        <section class="bg-gray-300 flex justify-center py-8 ">
+        <!-- Titre -->
+        <section class="bg-gray-300 flex justify-center p-5">
             <h2 class="text-2xl font-semibold">Informations personnelles</h2>
         </section>
-
+        <!-- corps de la section -->
         <section class="flex justify-center p-10">
             <div
                 class="bg-gray-50/95 dark:bg-gray-800 w-full md:w-96 flex justify-between items-center px-4 py-6 md:p-6 xl:p-8 flex-col rounded-4xl shadow-2xl">
@@ -91,7 +103,7 @@
                                 class="object-cover w-20 h-20 rounded-full shadow-black" pt-5 />
                             <div class="flex flex-col space-y-2">
                                 <p class="text-base dark:text-white font-semibold">Yavuz Kutuk</p>
-                                <p class="text-sm dark:text-gray-300">10 Commandes précédentes</p>
+
                             </div>
                         </div>
 
@@ -128,12 +140,58 @@
                                 <td class="px-4 py-2">6, rue des Grand hommes, 67000 Strasbourg</td>
                                 <td class="px-4 py-2">Sonnez au grand portail noir à gauche de la villa de Brendan Eich.
                                 </td>
-                                <td><button class="edit-comment-btn text-blue-500">Modifier le commentaire</button></td>
+                                <td>
+                                    <!-- Bouton "Modifier le commentaire" -->
+                                    <button
+                                        class="edit-comment-btn flex items-center px-3 py-2  bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+
+                                        <!-- Icône Crayon (visible sur petits écrans) -->
+                                        <span class="edit-icon text-lg md:hidden mr-2">✏️</span>
+
+                                        <!-- Texte + Icône Crayon (visible sur écrans md et plus) -->
+                                        <span class="md:flex flex-col items-center hidden">
+                                            <span class="mr-2">✏️</span>
+                                            <span>Modifier le</span><span>commentaire</span>
+                                        </span>
+
+                                    </button>
+
+                                    <style>
+                                        /* Taille et effet au survol */
+                                        .edit-comment-btn:hover {
+                                            transform: scale(1.05);
+                                            /* Agrandissement au survol */
+                                        }
+                                    </style>
+                                </td>
                             </tr>
                             <tr class="shipping-address">
                                 <td class="px-4 py-2">44, rue Alphonse Penaud, 75000 Paris</td>
                                 <td class="px-4 py-2">Proche du métro, à côté de la boulangerie.</td>
-                                <td><button class="edit-comment-btn text-blue-500">Modifier le commentaire</button></td>
+                                <td>
+                                    <!-- Bouton "Modifier le commentaire" -->
+                                    <button
+                                        class="edit-comment-btn flex items-center px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+
+                                        <!-- Icône Crayon (visible sur petits écrans) -->
+                                        <span class="edit-icon text-lg md:hidden mr-2">✏️</span>
+
+                                        <!-- Texte + Icône Crayon (visible sur écrans md et plus) -->
+                                        <span class="md:flex flex-col items-center hidden">
+                                            <span class="mr-2">✏️</span>
+                                            <span>Modifier le</span><span>commentaire</span>
+                                        </span>
+
+                                    </button>
+
+                                    <style>
+                                        /* Taille et effet au survol */
+                                        .edit-comment-btn:hover {
+                                            transform: scale(1.05);
+                                            /* Agrandissement au survol */
+                                        }
+                                    </style>
+                                </td>
                             </tr>
                         </table>
                         <button id="edit-shipping-address-btn" class="mt-4 py-2 px-4 bg-gray-800 text-white">Ajouter /
@@ -143,154 +201,165 @@
             </div>
         </section>
 
-        <section class="bg-gray-300  justify-center size-5rem;5rem py-5">
-            <h2>Informations de paiement</h2>
+        <!-- Mode de paiement -->
+        <!-- Titre -->
+        <section class="bg-gray-300 flex justify-center size-5rem;5rem py-5">
+            <h2 class="text-2xl font-semibold">Informations de paiement</h2>
         </section>
-        <section>
-            <section class="bg-gray-100/70">
-                <section class="md:flex md:justify-around md:p-5">
-                    <!-- Mode de paiement déjà enregistré-->
-                    <section>
-                        <h3>1 mode de paiement enregistré</h3>
-                        <div class="max-w-xs mx-auto bg-white rounded-lg border-2 shadow-md overflow-hidden mt-24">
-                            <div class="bg-gray-200 px-4 py-2">
-                                <h2 class="text-lg font-medium text-gray-800">Carte de Crédit</h2>
+        <!-- corps de la section -->
+        <section class=" bg-gray-100/70 md:flex md:justify-around md:p-5">
+            <!-- Mode de paiement déjà enregistré-->
+            <section>
+                <h2 class="font-bold font-black">1 mode de paiement enregistré</h2>
+                <div class="max-w-xs mx-auto bg-white rounded-lg border-2 shadow-md overflow-hidden mt-24">
+                    <div class="bg-gray-200 px-4 py-2">
+                        <h2 class="text-lg font-medium text-gray-800">Carte de Crédit</h2>
+                    </div>
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex flex-col items-start justify-between mb-6">
+                            <span class="text-sm font-medium text-gray-600">Nom du titulaire de la carte</span>
+                            <span class="text-lg font-medium text-gray-800">Wild Code School</span>
+                        </div>
+                        <div class="flex flex-col items-start justify-between mb-6">
+                            <span class="text-sm font-medium text-gray-600">Numéro de la carte</span>
+                            <span class="text-lg font-medium text-gray-800">**** **** **** 1234</span>
+                        </div>
+                        <div class="flex flex-row items-center justify-between mb-6">
+                            <div class="flex flex-col items-start">
+                                <span class="text-sm font-medium text-gray-600">Date d'expiration</span>
+                                <span class="text-lg font-medium text-gray-800">12/26</span>
                             </div>
-                            <div class="px-4 py-5 sm:p-6">
-                                <div class="flex flex-col items-start justify-between mb-6">
-                                    <span class="text-sm font-medium text-gray-600">Nom du titulaire de la carte</span>
-                                    <span class="text-lg font-medium text-gray-800">Wild Code School</span>
-                                </div>
-                                <div class="flex flex-col items-start justify-between mb-6">
-                                    <span class="text-sm font-medium text-gray-600">Numéro de la carte</span>
-                                    <span class="text-lg font-medium text-gray-800">**** **** **** 1234</span>
-                                </div>
-                                <div class="flex flex-row items-center justify-between mb-6">
-                                    <div class="flex flex-col items-start">
-                                        <span class="text-sm font-medium text-gray-600">Date d'expiration</span>
-                                        <span class="text-lg font-medium text-gray-800">12/26</span>
-                                    </div>
-                                    <div class="flex flex-col items-start">
-                                        <span class="text-sm font-medium text-gray-600">CVV</span>
-                                        <span class="text-lg font-medium text-gray-800">***</span>
-                                    </div>
-                                </div>
+                            <div class="flex flex-col items-start">
+                                <span class="text-sm font-medium text-gray-600">CVV</span>
+                                <span class="text-lg font-medium text-gray-800">***</span>
                             </div>
                         </div>
-                    </section>
-                    <!-- Ajout CB -->
-                    <section>
-                        <div class="max-w-sm mx-auto mt-20 bg-white rounded-md shadow-md overflow-hidden">
-                            <div class="px-6 py-4 bg-gray-400 text-white">
-                                <h1 class="text-lg font-bold">Credit Card</h1>
-                            </div>
-                            <div class="px-6 py-4">
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="card-number">
-                                        Numéro de carte de crédit
-                                    </label>
-                                    <input
-                                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        id="card-number" type="text" placeholder="**** **** **** ****">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="expiration-date">
-                                        Date d'expiration
-                                    </label>
-                                    <input
-                                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        id="expiration-date" type="text" placeholder="MM/YY">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="cvv">
-                                        CVV
-                                    </label>
-                                    <input
-                                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        id="cvv" type="text" placeholder="***">
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="holder-name">
-                                        Nom du titulaire de la carte de crédit
-                                    </label>
-                                    <input
-                                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                        id="holder-name" type="text" placeholder="Full Name">
+                    </div>
+                </div>
+            </section>
 
-           
-                        <div class="flex gap-2 flex-wrap justify-center max-w-3xl p-4 md:p-12">
-                            <button type="button"
-                                class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
-                                <svg class="w-4 h-4 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
-                                    data-icon="bitcoin" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M504 256c0 136.1-111 248-248 248S8 392.1 8 256 119 8 256 8s248 111 248 248zm-141.7-35.33c4.937-32.1-20.19-50.74-54.55-62.57l11.15-44.7-27.21-6.781-10.85 43.52c-7.154-1.783-14.5-3.464-21.8-5.13l10.93-43.81-27.2-6.781-11.15 44.69c-5.922-1.349-11.73-2.682-17.38-4.084l.031-.14-37.53-9.37-7.239 29.06s20.19 4.627 19.76 4.913c11.02 2.751 13.01 10.04 12.68 15.82l-12.7 50.92c.76 .194 1.744 .473 2.829 .907-.907-.225-1.876-.473-2.876-.713l-17.8 71.34c-1.349 3.348-4.767 8.37-12.47 6.464 .271 .395-19.78-4.937-19.78-4.937l-13.51 31.15 35.41 8.827c6.588 1.651 13.05 3.379 19.4 5.006l-11.26 45.21 27.18 6.781 11.15-44.73a1038 1038 0 0 0 21.69 5.627l-11.11 44.52 27.21 6.781 11.26-45.13c46.4 8.781 81.3 5.239 95.99-36.73 11.84-33.79-.589-53.28-25-65.99 17.78-4.098 31.17-15.79 34.75-39.95zm-62.18 87.18c-8.41 33.79-65.31 15.52-83.75 10.94l14.94-59.9c18.45 4.603 77.6 13.72 68.81 48.96zm8.417-87.67c-7.673 30.74-55.03 15.12-70.39 11.29l13.55-54.33c15.36 3.828 64.84 10.97 56.85 43.03z">
-                                    </path>
-                                </svg>
-                                Pay with Bitcoin
-                            </button>
-                            <button type="button"
-                                class="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
-                                <svg class="w-4 h-4 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
-                                    data-icon="paypal" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512">
-                                    <path fill="currentColor"
-                                        d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z">
-                                    </path>
-                                </svg>
-                                Check out with PayPal
-                            </button>
-                            <button type="button"
-                                class="text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 me-2 mb-2">
-                                <svg class="w-5 h-5 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
-                                    data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512">
-                                    <path fill="currentColor"
-                                        d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
-                                    </path>
-                                </svg>
-                                Check out with Apple Pay
+            <!-- Ajout mode de paiement -->
+            <section>
+                <div class="max-w-sm mx-auto mt-20 bg-white rounded-md shadow-md overflow-hidden">
+                    <div class="px-6 py-4 bg-gray-400 text-white">
+                        <h1 class="text-lg font-bold ">Ajouter un mode de paiement</h1>
+                        <h2 class="text-lg font-bold ">Carte de crédit</h2>
+                    </div>
+                    <div class="px-6 py-4">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                                Numéro de carte de crédit
+                            </label>
+                            <input
+                                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="card-number" type="text" placeholder="**** **** **** ****">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="expiration-date">
+                                Date d'expiration
+                            </label>
+                            <input
+                                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="expiration-date" type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="cvv">
+                                CVV
+                            </label>
+                            <input
+                                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="cvv" type="text" placeholder="***">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="holder-name">
+                                Nom du titulaire de la carte de crédit
+                            </label>
+                            <input
+                                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="holder-name" type="text" placeholder="Full Name">
+                        </div>
+                        <!-- bouton validation carte -->
+                        <div class="flex justify-center">
+                            <button id="add-card-btn"
+                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+                                Ajouter une carte
                             </button>
                         </div>
-                    </section>
-                </section>
+                    </div>
+
+                    <!-- Boutons paiement bitcon, paypal, apple pay -->
+                    <div class="flex gap-2 flex-wrap justify-center max-w-3xl p-4 md:p-12">
+                        <button type="button"
+                            class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+                            <svg class="w-4 h-4 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
+                                data-icon="bitcoin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M504 256c0 136.1-111 248-248 248S8 392.1 8 256 119 8 256 8s248 111 248 248zm-141.7-35.33c4.937-32.1-20.19-50.74-54.55-62.57l11.15-44.7-27.21-6.781-10.85 43.52c-7.154-1.783-14.5-3.464-21.8-5.13l10.93-43.81-27.2-6.781-11.15 44.69c-5.922-1.349-11.73-2.682-17.38-4.084l.031-.14-37.53-9.37-7.239 29.06s20.19 4.627 19.76 4.913c11.02 2.751 13.01 10.04 12.68 15.82l-12.7 50.92c.76 .194 1.744 .473 2.829 .907-.907-.225-1.876-.473-2.876-.713l-17.8 71.34c-1.349 3.348-4.767 8.37-12.47 6.464 .271 .395-19.78-4.937-19.78-4.937l-13.51 31.15 35.41 8.827c6.588 1.651 13.05 3.379 19.4 5.006l-11.26 45.21 27.18 6.781 11.15-44.73a1038 1038 0 0 0 21.69 5.627l-11.11 44.52 27.21 6.781 11.26-45.13c46.4 8.781 81.3 5.239 95.99-36.73 11.84-33.79-.589-53.28-25-65.99 17.78-4.098 31.17-15.79 34.75-39.95zm-62.18 87.18c-8.41 33.79-65.31 15.52-83.75 10.94l14.94-59.9c18.45 4.603 77.6 13.72 68.81 48.96zm8.417-87.67c-7.673 30.74-55.03 15.12-70.39 11.29l13.55-54.33c15.36 3.828 64.84 10.97 56.85 43.03z">
+                                </path>
+                            </svg>
+                            Pay with Bitcoin
+                        </button>
+                        <button type="button"
+                            class="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2">
+                            <svg class="w-4 h-4 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
+                                data-icon="paypal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path fill="currentColor"
+                                    d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z">
+                                </path>
+                            </svg>
+                            Check out with PayPal
+                        </button>
+                        <button type="button"
+                            class="text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 me-2 mb-2">
+                            <svg class="w-5 h-5 me-2 -ms-1" aria-hidden="true" focusable="false" data-prefix="fab"
+                                data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path fill="currentColor"
+                                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
+                                </path>
+                            </svg>
+                            Check out with Apple Pay
+                        </button>
+                    </div>
+                </div>
             </section>
         </section>
+
 
     </main>
 
     <footer class="text-black border-t border-black bg-white bg-opacity-50 py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="w-full flex justify-between items-center px-4">
             <!-- Copyright -->
-            <p class="text-xs font-medium">&copy; 2025</p>
             <div>
-                <a class="text-xs" href="about.html">
-                    <p class="flex justify-center">Mentions légales</p>
-                </a>
+                <p class="text-xs md:text-xl font-medium">&copy; 2025</p>
+            </div>
+
+            <!-- Mentions légales -->
+            <div>
+                <a class="text-xs md:text-xl flex justify-center" href="about.html">Mentions légales</a>
             </div>
 
             <!-- Social Media Icons -->
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-blue-500">
-                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
                             clip-rule="evenodd" />
                     </svg>
                 </a>
                 <a href="#" class="hover:text-blue-400">
-                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
                         <path fill="currentColor" fill-rule="evenodd"
                             d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
                             clip-rule="evenodd" />
                     </svg>
                 </a>
                 <a href="#" class="hover:text-pink-500">
-                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 24 24">
                         <path
                             d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
                     </svg>
@@ -298,6 +367,7 @@
             </div>
         </div>
     </footer>
+
 
     <script src="./account.js"></script>
     <script type="module" src="./src/main.js"></script>
