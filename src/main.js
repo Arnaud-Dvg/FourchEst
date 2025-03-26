@@ -1,6 +1,9 @@
 import './style.css';
 
 //----------------------------------Section Carousel !!!-----------------------------------
+
+
+
 // ciblage de class puis declaration de la variable class carousel container
 const carouselContainer = document.querySelector('.carousel-container');
 
@@ -64,4 +67,6 @@ for (let i = 0; i < repeatCount; i++) {
 // appel fonction ligne 16 afin de crée les rows du carousel donc si vous en voulez plus, copie colle.
 createCarouselRow(images, 99, 1000); // nombres de copie du tableau et delai du premier carousel
 createCarouselRow(images, 99, 2000);// idem mais pour le 2eme
+
+//----------------------------------Section Search bar des restaurants !!!-----------------------------------
 
