@@ -7,6 +7,8 @@
       name="description"
       content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est"
     />
+    <meta name="description" content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
+    <link rel="icon" type="image/x-icon" href="assetes\images\favicon.ico">
     <meta name="author" content="Wilders Grand'EST" />
     <link rel="stylesheet" href="./src/style.css" />
     <title>FourchEst | HomePage</title>
@@ -52,7 +54,7 @@
     <img src="assetes/images/burgerdesktop.png" alt="image du burger" class="hidden md:block md:w-55 md:h-60 md:ml-50">
     </section>
 
-    <form class="relative md:bottom-30 my-5 mx-7 md:mx-50 lg:mx-100">
+    <form action="./restaurant.html" class="relative md:bottom-30 my-5 mx-7 md:mx-50 lg:mx-100">
       <label
         for="default-search"
         class="mb-2 text-sm font-medium text-gray-900 sr-only"
@@ -105,7 +107,7 @@
     <!---------------------------CAROUSEL--------------------------->
 
     <div
-      class="carousel-container w-full flex flex-col justify-center gap-0.7 "
+      class="carousel-container w-full flex flex-col justify-center gap-0.7 overflow-auto "
     >
       <div
         class="carousel-track flex gap-0.5 transition-transform duration-0.5r ease-in-out"
@@ -348,17 +350,21 @@
     <!---------------------------Footer--------------------------->
 
     <footer class="text-black border-t border-black bg-white/95 py-4">
-      <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="w-full flex justify-between items-center px-4">
         <!-- Copyright -->
-        <p class="text-xs font-medium">&copy; 2025</p>
-        <div>
-          <a class="text-xs" href="about.html">
-            <p class="flex justify-center">Mentions légales</p>
+        <div class="flex justify-start">
+          <p class="text-xs font-medium md:text-xl">&copy; 2025</p>
+        </div>
+    
+        <!-- Mentions -->
+        <div class="flex-grow flex justify-center">
+          <a class="text-xs md:text-xl" href="about.html">
+            <p class="">Mentions légales</p>
           </a>
         </div>
-
-        <!-- Social Media Icons -->
-        <div class="flex space-x-4">
+    
+        <!-- Icons -->
+        <div class="flex justify-end space-x-4">
           <a href="#" class="hover:text-blue-500">
             <svg
               class="w-6 h-6 text-gray-800"
@@ -394,7 +400,7 @@
               />
             </svg>
           </a>
-          <a href="#" class="hover:text-pink-500">
+          <a href="#">
             <svg
               class="w-6 h-6 text-gray-800"
               aria-hidden="true"
@@ -412,7 +418,9 @@
         </div>
       </div>
     </footer>
+    
 
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
