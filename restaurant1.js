@@ -311,3 +311,24 @@ for (restaurant of restaurantFilter(restaurantTable)) {
 
     createdCard(restaurant);
 }
+
+// Bouton retour haut de page
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.querySelector("[data-role='scroll-arrow']");
+
+    scrollButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollButton.classList.remove("hidden");
+        } else {
+            scrollButton.classList.add("hidden");
+        }
+    });
+});
+
+
+  
