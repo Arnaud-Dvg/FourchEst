@@ -17,7 +17,7 @@
     <header>
         <nav class="relative flex items-center justify-center">
             <a href="index.html">
-                <svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true"
+                <svg class="h-8 text-white absolute bg-[#191998] rounded-2xl top-2 right-0 w-10" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M15 12H3m0 0 4-4m-4 4 4 4M21 16V8a2 2 0 0 0-2-2h-4" />
@@ -72,7 +72,7 @@
 
         <!-- Bouton telecharger en .PDF -->
         <div class="flex justify-center mt-4">
-            <button id="download-btn" class="py-2 px-6 bg-gray-800 text-white text-base font-medium hover:bg-black">
+            <button id="download-btn" class="py-2 px-6 bg-[#191998] text-white text-base font-medium hover:bg-black">
                 Télécharger la facture en PDF
             </button>
         </div>
@@ -80,7 +80,7 @@
         <!-- Bouton voir toutes les commandes -->
         <div class="flex justify-center mt-4 p-5">
             <button id="view-all-orders-btn"
-                class="py-2 px-6 bg-indigo-600 text-white text-base font-medium hover:bg-indigo-700">
+                class="py-2 px-6 bg-[#191998] text-white text-base font-medium hover:bg-indigo-700">
                 Voir toutes mes commandes
             </button>
         </div>
@@ -115,7 +115,7 @@
                                     <td class="px-4 py-2">bg-67@caramail.com</td>
                                 </tr>
                             </table>
-                            <button id="edit-personal-info-btn" class="mt-4 py-2 px-4 bg-gray-800 text-white">Modifier
+                            <button id="edit-personal-info-btn" class="mt-4 py-2 px-4 bg-[#191998] text-white">Modifier
                                 les informations</button>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                                 <td class="px-4 py-2">6, rue des Grand hommes, 67000 Strasbourg</td>
                             </tr>
                         </table>
-                        <button id="edit-billing-address-btn" class="mt-4 py-2 px-4 bg-gray-800 text-white">Modifier
+                        <button id="edit-billing-address-btn" class="mt-4 py-2 px-4 bg-[#191998] text-white">Modifier
                             l'adresse</button>
                     </div>
 
@@ -143,7 +143,7 @@
                                 <td>
                                     <!-- Bouton "Modifier le commentaire" -->
                                     <button
-                                        class="edit-comment-btn flex items-center px-3 py-2  bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                                        class="edit-comment-btn flex items-center px-3 py-2  bg-[#191998] text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
 
                                         <!-- Icône Crayon (visible sur petits écrans) -->
                                         <span class="edit-icon text-lg md:hidden mr-2">✏️</span>
@@ -171,7 +171,7 @@
                                 <td>
                                     <!-- Bouton "Modifier le commentaire" -->
                                     <button
-                                        class="edit-comment-btn flex items-center px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                                        class="edit-comment-btn flex items-center px-3 py-2 bg-[#191998] text-white rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
 
                                         <!-- Icône Crayon (visible sur petits écrans) -->
                                         <span class="edit-icon text-lg md:hidden mr-2">✏️</span>
@@ -194,7 +194,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <button id="edit-shipping-address-btn" class="mt-4 py-2 px-4 bg-gray-800 text-white">Ajouter /
+                        <button id="edit-shipping-address-btn" class="mt-4 py-2 px-4 bg-[#191998] text-white">Ajouter /
                             Modifier une adresse</button>
                     </div>
                 </div>
@@ -338,8 +338,8 @@
             <div>
                 <a href="about.html" class="text-[#191998] font-normal text-sm
                 hover:underline bg-white p-1 rounded-full ">
-                 Mentions légales
-               </a>
+                    Mentions légales
+                </a>
             </div>
 
             <!-- Social Media Icons -->
@@ -375,47 +375,47 @@
     <script src="./account.js"></script>
     <script type="module" src="./src/main.js"></script>
 
- <!---------------------------Background--------------------->
- <script>
-    const icons = [
-      // Fourchette
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zM6 10v2a2 2 0 0 0 2 2v9a1 1 0 1 0 2 0v-9a2 2 0 0 0 2-2v-2H6z"/></svg>',
-      // Pizza
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 2S6.5 3.5 3 21c7.5-2.7 14.6-9.1 18-18zM7.5 19.5l1.1-3.9 2.3 2.3-3.4 1.6zm7.5-6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>',
-      // Eponge
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4c0 1.3.6 2.5 1.5 3.2V20a1 1 0 0 0 2 0V9.2A4 4 0 0 0 12 2z"/></svg>',
-      // Couteau
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2l13 13-4 4L2 6l1-4z"/></svg>',
-      // Verre de vin
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 2h8l-1 8H9L8 2zm2 10h4v9h-4v-9z"/></svg>',
-      // tasse de café
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h2a2 2 0 0 1 0 4h-2V8zM2 6h16v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V6zm2 14h12v2H4v-2z"/></svg>',
-      // Pain
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6c0-1.1.9-2 2-2h12a2 2 0 0 1 0 4H4V6z"/></svg>',
-      // Oeuf
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 4 10 4 14a8 8 0 0 0 16 0c0-4-4.1-12-8-12z"/></svg>',
-      // Glace
-      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5 5 5 0 0 0 .3 1.7A4.5 4.5 0 0 0 6 12h12a4.5 4.5 0 0 0-1.3-3.3A5 5 0 0 0 12 2zm0 13l-2 5h4l-2-5z"/></svg>',
-      
-    ];
+    <!---------------------------Background--------------------->
+    <script>
+        const icons = [
+            // Fourchette
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zM6 10v2a2 2 0 0 0 2 2v9a1 1 0 1 0 2 0v-9a2 2 0 0 0 2-2v-2H6z"/></svg>',
+            // Pizza
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 2S6.5 3.5 3 21c7.5-2.7 14.6-9.1 18-18zM7.5 19.5l1.1-3.9 2.3 2.3-3.4 1.6zm7.5-6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>',
+            // Eponge
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4c0 1.3.6 2.5 1.5 3.2V20a1 1 0 0 0 2 0V9.2A4 4 0 0 0 12 2z"/></svg>',
+            // Couteau
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2l13 13-4 4L2 6l1-4z"/></svg>',
+            // Verre de vin
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 2h8l-1 8H9L8 2zm2 10h4v9h-4v-9z"/></svg>',
+            // tasse de café
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h2a2 2 0 0 1 0 4h-2V8zM2 6h16v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V6zm2 14h12v2H4v-2z"/></svg>',
+            // Pain
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6c0-1.1.9-2 2-2h12a2 2 0 0 1 0 4H4V6z"/></svg>',
+            // Oeuf
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 4 10 4 14a8 8 0 0 0 16 0c0-4-4.1-12-8-12z"/></svg>',
+            // Glace
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5 5 5 0 0 0 .3 1.7A4.5 4.5 0 0 0 6 12h12a4.5 4.5 0 0 0-1.3-3.3A5 5 0 0 0 12 2zm0 13l-2 5h4l-2-5z"/></svg>',
 
-    const pageHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-    const numIcons = 150;
+        ];
 
-    for (let i = 0; i < numIcons; i++) {
-      const icon = document.createElement('div');
-      icon.classList.add('icon');
-      if (Math.random() > 0.5) icon.classList.add('alt');
-      icon.style.top = Math.random() * pageHeight + 'px';
-      icon.style.left = Math.random() * 100 + 'vw';
-      icon.style.animationDelay = `${Math.random() * 0}s, ${Math.random() * 0}s`;
-      const size = 20 + Math.random() * 40;
-      icon.style.width = size + 'px';
-      icon.style.height = size + 'px';
-      icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
-      document.body.appendChild(icon);
-    }
-  </script>
+        const pageHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        const numIcons = 150;
+
+        for (let i = 0; i < numIcons; i++) {
+            const icon = document.createElement('div');
+            icon.classList.add('icon');
+            if (Math.random() > 0.5) icon.classList.add('alt');
+            icon.style.top = Math.random() * pageHeight + 'px';
+            icon.style.left = Math.random() * 100 + 'vw';
+            icon.style.animationDelay = `${Math.random() * 0}s, ${Math.random() * 0}s`;
+            const size = 20 + Math.random() * 40;
+            icon.style.width = size + 'px';
+            icon.style.height = size + 'px';
+            icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            document.body.appendChild(icon);
+        }
+    </script>
 </body>
 
 </html>
