@@ -227,22 +227,26 @@ function restaurantFilter(table) {
 // Affichage----------------------------------------------------------------
 function createdCard(restaurantCard) {
     const card = document.createElement("article");
-    card.classList.add("deleteResto", "block", "rounded-lg", "bg-white/95", "shadow-2xl", "w-[220px]", "h-auto", "max-w-sm", "mx-auto", "mb-10");
+    card.classList.add("deleteResto", "block", "rounded-lg", "bg-white/95", "shadow-2xl", "w-[220px]", "h-auto", "max-w-sm", "mx-auto", "mb-10", "transition", "duration-300", "hover:scale-120");
 
+    // Création de la balise <a></a> ppur que la carte soit cliquable
     const link = document.createElement("a");
     link.href = "order.html";
     card.appendChild(link);
 
+    // Ajout des images resto 
     const imgResto = document.createElement("img");
     imgResto.classList.add("rounded-t-lg", "w-[220px]", "h-[146px]", "object-cover");
     imgResto.src = restaurantCard.img;
     imgResto.alt = restaurantCard.nameOf;
     link.appendChild(imgResto);
 
+    // Création de la balise <div></div>
     const textContainer = document.createElement("div");
     textContainer.classList.add("p-1", "py-2", "text-surface", "dark:to-black", "text-center");
     link.appendChild(textContainer);
     
+    // Création de la balise <h2></h2>
     const titreResto = document.createElement("h2");
     titreResto.classList.add("mb-2", "text-xl", "font-medium", "leading-tight");
     titreResto.textContent = restaurantCard.nameOf;
@@ -254,10 +258,11 @@ function createdCard(restaurantCard) {
 
     // Ajouter le score à gauche de l'étoile
     const scoreText = document.createElement("span");
-    scoreText.classList.add("text-s", "font-semibold", "mr-2", "text-[#FFC94F]");
+    scoreText.classList.add("text-s", "font-semibold", "mr-2", "text-[#191998]");
     scoreText.textContent = restaurantCard.score; // Afficher le score du restaurant
     starContainer.appendChild(scoreText);
 
+    // Ajout de l'image étoile
     const noteEtoile = document.createElement("img");
     noteEtoile.classList.add("w-5");
     noteEtoile.src = restaurantCard.imgNote;
@@ -277,9 +282,6 @@ function createdCard(restaurantCard) {
 
     cardContainer.appendChild(card);
 }
-
-
-
 
 // Clean de l'écran------------------------------------------------
 function cleanScreen() {
