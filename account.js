@@ -4,36 +4,39 @@ const cards = document.querySelector("#cards");
 
 const lastresto = [
     {
-        date: '27 fevrier',
-        nameofresto: 'Restaurant 3',
-        picture: './assetes/images/kebab.jpg',
-        descriimg: 'Kebab Royal',
-        title: 'Le meilleur Kebab de tout Strasbourg',
-        description: 'Généreux et riche en cholestérol !',
-        lastread: '6 days ago',
+        date: '27 Mars',
+        nameofresto: 'Aux armes de strasbourg',
+        picture: './assetes/images/resto2.jpg',
+        descriimg: 'aux armes de strasbourg',
+        title: 'Découvrez la cuisine généreuse et savoureuse du Chef Alain Ehrhardt',
+        description: 'Généreusement servis, les plats sont fait-maison par une équipe de passionnés. Retrouvez les plats réconfortants de la cuisine alsacienne, parsemés de touches gourmandes, signatures du Chef : de la bouchée à la reine, spécialité de la maison, à la Forêt Noire, sans oublier l’incontournable choucroute.',
+        lastread: '1 days ago',
+        link: "#"
     },
     {
-        date: '12 mars',
-        nameofresto: 'Restaurant 9',
-        picture: './assetes/images/tacos_sushis.png',
-        descriimg: 'Tacos sushi',
-        title: 'Le seul et l’unique Tacos Sushi',
-        description: 'Oserez-vous ce tacos unique au bon goût de la mer ?',
-        lastread: '3 h read',
+        date: '21 mars',
+        nameofresto: 'Brasserie l excelsior',
+        picture: './assetes/images/resto1.jpg',
+        descriimg: 'excelsior nancy',
+        title: 'Un Art de Vivre Nancéien',
+        description: 'Véritable temple de l’Art Nouveau depuis 1911',
+        lastread: '7 day ago',
+        link: "order.html"
     },
     {
-        date: '10 mars',
-        nameofresto: 'Restaurant 1',
-        picture: './assetes/images/kebab_choucroute.jpeg',
-        descriimg: 'Kebab choucroute',
-        title: 'Toute l’Alsace dans un kebab',
-        description: 'Venez comme vous êtes et profitez du meilleur de la choucroute alsacienne et du meilleur kebab de tout Strasbourg.',
-        lastread: '6 mins read',
+        date: '20 mars',
+        nameofresto: 'Restaurant les Chauvins Père&Fils',
+        picture: './assetes/images/resto17.jpg',
+        descriimg: 'Les chauvins strasbourg',
+        title: 'Alsacez vos papilles',
+        description: 'Restaurant Tapas alsaciennes à Strasbourg',
+        lastread: '8 day ago',
+        link: "#"
     },
 ];
 
 function createCard(resto) {
-    const { date, picture, descriimg, nameofresto, title, description, lastread } = resto;
+    const {link, date, picture, descriimg, nameofresto, title, description, lastread, } = resto;
 
     // Création de la carte
     const card = document.createElement("div");
@@ -41,6 +44,12 @@ function createCard(resto) {
     card.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
     card.style.padding = "10px";
     card.style.marginBottom = "15px";
+
+    // Lien pour la redirection
+    const cardLink = document.createElement("a");
+    cardLink.href = link;  // Assure-toi que chaque objet `resto` contient un champ `link`
+    cardLink.classList.add("block", "w-full", "h-full");  // Cela fait que toute la carte est cliquable
+    
 
     // Image
     const imgContainer = document.createElement("div");
@@ -74,7 +83,7 @@ function createCard(resto) {
 
     // Titre du restaurant
     const restoName = document.createElement("div");
-    restoName.classList.add(
+        restoName.classList.add(
         "absolute",
         "bottom-0",
         "left-0",
@@ -135,7 +144,7 @@ function createCard(resto) {
     cardBody.classList.add("px-6", "py-4");
 
     const cardTitle = document.createElement("a");
-    cardTitle.href = "#";
+    cardTitle.href = link;
     cardTitle.classList.add(
         "font-semibold",
         "text-lg",
@@ -164,10 +173,25 @@ function createCard(resto) {
 
     readTimeDiv.appendChild(readTime);
 
+    // Bouton "Aller à la page"
+    const goToPageButton = document.createElement("button");
+    goToPageButton.textContent = "Voir la carte";
+    goToPageButton.classList.add("bg-indigo-600", "text-white", "px-4", "py-2", "rounded", "hover:bg-indigo-700", "transition", "duration-300", "mt-4");
+
+    // Action au clic
+    goToPageButton.addEventListener("click", () => {
+        window.location.href = link; // Redirige vers la page spécifiée par `link`
+    });
+
+    // Ajout du bouton dans le corps de la carte
+    cardBody.appendChild(goToPageButton);
+
+
     // Ajout des éléments dans la carte
     card.appendChild(imgContainer);
     card.appendChild(cardBody);
     card.appendChild(readTimeDiv);
+    
 
     // Ajout de la carte dans la div #cards
     cards.appendChild(card);
@@ -181,88 +205,85 @@ lastresto.forEach(createCard);
 const orders = [
     {
         orderNumber: '13432',
-        date: '21 mars 2025 à 10:34',
-        restaurant: 'RESTO 2',
+        date: '27 mars 2025 à 20:15',
+        restaurant: 'Aux armes de Strasbourg',
         items: [
-            { name: 'Kebab Choucroute', price: '11.00€' },
-            { name: 'Grande frite', price: '3.00€' },
-            { name: 'Cola light', price: '2.00€' },
-            { name: 'Menu enfant', price: '5.00€' },
-            { name: 'Kebab', price: '8.00€' },
-            { name: 'Petite frite', price: '1.50€' },
+            { name: 'Soupe à l oignon gratinée petit', price: '6.50€' },
+            { name: 'Soupe à l oignon nature petit', price: '6.50€' },
+            { name: 'Jarret de porc braisé à la bière, pommes sautées, salade verte', price: '21.90€' },
+            { name: 'Bouchée à la reine, nouilles à lalsacienne', price: '19.90€' },
+            { name: 'Strudel aux pommes tièdes, sauce vanille', price: '8.90€' },
+            { name: 'Strudel aux pommes tièdes, sauce vanille', price: '8.90€' },
             { name: 'Carola', price: '2.00€' },
             { name: 'Elzas Cola', price: '3.00€' }
         ],
-        total: '43.50€',
-        discount: '-21.75€ (50%)',
+        total: '77.60€',
+        discount: '-11.64€ wilders',
         shipping: '4.00€',
-        finalTotal: '25.75€',
-        tax: '1.30€'
+        finalTotal: '69.96€',
+        tax: '3.50€'
     },
 
     {
-        orderNumber: '13432',
+        orderNumber: '12426',
         date: '21 mars 2025 à 10:34',
-        restaurant: 'RESTO 2',
+        restaurant: 'Brasserie Excelsior',
         items: [
-            { name: 'Kebab Choucroute', price: '11.00€' },
-            { name: 'Grande frite', price: '3.00€' },
-            { name: 'Cola light', price: '2.00€' },
-            { name: 'Menu enfant', price: '5.00€' },
-            { name: 'Kebab', price: '8.00€' },
-            { name: 'Petite frite', price: '1.50€' },
-            { name: 'Carola', price: '2.00€' },
-            { name: 'Elzas Cola', price: '3.00€' }
+            { name: 'Kebab', price: '5.50€' },
+            { name: 'Kebab', price: '5.50€' },
+            { name: 'Burger', price: '5.50€' },
+            { name: 'Bretzel', price: '3.50€' },
+            { name: 'Bretzel', price: '3.50€' },
+            { name: 'Bretzel', price: '3.50€' },
+            { name: 'Flammenkueche', price: '10.50€' },
+            { name: 'Choucroute', price: '10.00€' }
         ],
-        total: '43.50€',
-        discount: '-21.75€ (50%)',
+        total: '53.00€',
+        discount: 'Aucun code',
         shipping: '4.00€',
-        finalTotal: '25.75€',
-        tax: '1.30€'
+        finalTotal: '57.00€',
+        tax: '2.85€'
     },
 
     {
-        orderNumber: '13332',
+        orderNumber: '11999',
         date: '20 mars 2025 à 18:55',
-        restaurant: 'RESTO 2',
+        restaurant: 'Restaurant les chauvins',
         items: [
-            { name: 'Kebab Choucroute', price: '11.00€' },
-            { name: 'Grande frite', price: '3.00€' },
-            { name: 'Cola light', price: '2.00€' },
-            { name: 'Menu enfant', price: '5.00€' },
-            { name: 'Kebab', price: '8.00€' },
-            { name: 'Petite frite', price: '1.50€' },
-            { name: 'Carola', price: '2.00€' },
-            { name: 'Elzas Cola', price: '3.00€' }
+            { name: 'Grumbeerekiechle et bibeleskäs', price: '9.90€' },
+            { name: 'Champignons farcis au escargots de Rémy Koehl ', price: '11.70€' },
+            { name: 'Saucisson du moment (Bergkäs au munster... selon arrivage) de la boucherie Degert, Pickles', price: '9.70€' },
+            { name: 'Sylvaner Vieille Vigne Dom Materne Haegelin bouteille', price: '34.00€' },
+            { name: 'Kougelhopf glacé aux raisins macérés au marc de Gewurz de la maison Alba', price: '8.00€' },
+            { name: 'Kougelhopf façon pain perdu, fruit du moment et boule de glace', price: '9.00€' },            
+            { name: 'Lizbeth 100cl', price: '5.40€' },
+            { name: 'Elzas Cola', price: '3.80€' },
+            { name: 'Elzas Cola', price: '3.80€' },
         ],
-        total: '43.50€',
-        discount: '-21.75€ (50%)',
+        total: '95.30€',
+        discount: 'Aucun code',
         shipping: '4.00€',
-        finalTotal: '25.75€',
-        tax: '1.30€'
+        finalTotal: '99.30€',
+        tax: '4.97€'
     },
 
     {
         orderNumber: '10432',
-        date: '18 mars 2025 à 19:05',
-        restaurant: 'RESTO 2',
+        date: '15 mars 2025 à 19:05',
+        restaurant: 'Brasserie Excelsior',
         items: [
-            { name: 'Kebab Choucroute', price: '11.00€' },
-            { name: 'Grande frite', price: '3.00€' },
-            { name: 'Cola light', price: '2.00€' },
-            { name: 'Menu enfant', price: '5.00€' },
-            { name: 'Kebab', price: '8.00€' },
-            { name: 'Petite frite', price: '1.50€' },
-            { name: 'Carola', price: '2.00€' },
-            { name: 'Elzas Cola', price: '3.00€' }
+            { name: 'Pâtes Bolognaise', price: '10.50€' },
+            { name: 'Flammenkueche', price: '10.50€' },
+            { name: 'Bretzel', price: '3.50€' },
+            
         ],
-        total: '43.50€',
-        discount: '-21.75€ (50%)',
+        total: '24.50€',
+        discount: 'Aucun code',
         shipping: '4.00€',
-        finalTotal: '25.75€',
-        tax: '1.30€'
+        finalTotal: '28.50€',
+        tax: '1.43€'
     },
-    // Add more orders as needed
+    // Voir plus de factures
 ];
 
 function createOrderCard(order) {
@@ -285,7 +306,7 @@ function createOrderCard(order) {
                             <h3 class="text-xl">${restaurant}</h3>
                             <div class="flex flex-col space-y-2">
                                 ${items.map(item => `
-                                    <p class="text-sm text-gray-800"><span class="text-gray-300">${item.name}:</span> ${item.price}</p>
+                                    <p class="text-sm text-gray-800"><span class="text-gray-700">${item.name}:</span> ${item.price}</p>
                                 `).join('')}
                             </div>
                         </div>
@@ -348,7 +369,7 @@ document.getElementById('view-all-orders-btn').addEventListener('click', () => {
 // Handle "Télécharger la facture en PDF" button click
 document.getElementById('download-btn').addEventListener('click', () => {
     alert('Téléchargement de la facture en PDF...');
-    // Logic to generate PDF can be added here (jsPDF library can be used)
+    
 });
 
 // Initial render of orders
