@@ -27,7 +27,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="none"
+            fill="black"
             viewBox="0 0 24 24"
           >
             <path
@@ -52,71 +52,74 @@
     </header>
 
     <!---------------------------Bar de recherche--------------------->
-    <section class="md:relative md:top-10 md:flex md:justify-around ">
+    <section class="flex flex-col items-center md:flex-row md:justify-between mx-5 mt-5 space-y-5 md:space-y-0">
+      <!-- Image de Gauche -->
       <img
         src="assetes/images/macaronBanniere.png"
         alt="images du macaron"
-        class="hidden md:block md:w-55 md:h-60 md:mr-70"
+        class="hidden md:block md:w-40 md:h-40 lg:w-48 lg:h-48"
       />
+    
+      <form
+        action="./restaurant.html"
+        class="w-full md:w-2/3 lg:w-1/2 relative shadow-xl"
+      >
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <select
+            id="default-search"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 appearance-none transition duration-200"
+            aria-label="Select a position"
+            required
+          >
+            <option value="" disabled selected hidden>
+            Sélectionnez une ville...
+            </option>
+            <option value="Metz">Metz</option>
+            <option value="Nancy">Nancy</option>
+            <option value="Strasbourg">Strasbourg</option>
+            <option value="Reims">Reims</option>
+          </select>
+    
+          <button
+            type="submit"
+            class="text-white absolute right-2.5 bottom-2.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-4 py-2"
+          >
+            Recherche
+          </button>
+        </div>
+      </form>
+    
+      <!-- Image de droite -->
       <img
         src="assetes/images/burgerdesktop.png"
         alt="image du burger"
-        class="hidden md:block md:w-55 md:h-60 md:ml-50"
+        class="hidden md:block md:w-40 md:h-40 lg:w-48 lg:h-48"
       />
     </section>
-
-    <form
-      action="./restaurant.html"
-      class="relative md:bottom-30 my-5 mx-7 md:mx-50 lg:mx-100 shadow-xl"
-    >
-      <label
-        for="default-search"
-        class="mb-2 text-sm font-medium text-gray-900 sr-only"
-        >Search</label
-      >
-      <div class="relative">
-        <div
-          class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-        >
-          <svg
-            class="w-4 h-4 text-gray-500"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-            />
-          </svg>
-        </div>
-        <select
-          id="default-search"
-          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50/95 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 appearance-none transition duration-200"
-          aria-label="Select a position"
-          required
-        >
-          <option value="" disabled selected hidden>
-            Select a position...
-          </option>
-          <option value="Metz">Metz</option>
-          <option value="Nancy">Nancy</option>
-          <option value="Strasbourg">Strasbourg</option>
-          <option value="Reims">Reims</option>
-        </select>
-
-        <button
-          type="submit"
-          class="text-white absolute end-2.5 bottom-2.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300  shadow-blue-500/50 dark:shadow-blue-800/80 text-center font-medium rounded-lg text-sm px-4 py-2"
-        >
-          Recherche
-        </button>
-      </div>
-    </form>
 
     <!---------------------------CAROUSEL--------------------------->
 
@@ -131,7 +134,7 @@
     <!---------------------------Cartes----------------------------->
 
     <section
-      class="flex flex-col md:grid md:grid-cols-3 lg:grid lg:grid-cols-3"
+      class="flex flex-col mx-auto md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 "
     >
       <div
         class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
@@ -233,20 +236,54 @@
     </button>
   </div>
       </div>
+
+      <div
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
+      >
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+          Garantie
+        </h2>
+        <div class="relative flex justify-center p-1">
+          <img
+            src="assetes/images/garantie_thumbs_up.png"
+            class="w-55 h-40 rounded-2xl md:group-hover:opacity-0 md:transition-opacity md:duration-300"
+            alt="Livraison rapide"
+            id="image-4"
+          />
+          <p
+      class="hidden md:block md:absolute md:top-0 md:left-0 md:w-full md:h-full text-center text-sm font-bold rounded-2xl px-3 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300"
+      id="message-4"
+    >
+    Nous assurons une livraison fiable et sécurisée. En cas de retard ou de problème, 
+    <br>nous intervenons rapidement pour une solution efficace. 
+    <br>Votre satisfaction est notre priorité !
+        </p> 
+        </div>
+        
+        <div class="p-5 text-center">
+          <button
+            class="toggle-button md:hidden px-4 p-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center me-2 mb-2"
+            data-target="message-4"
+            data-image="image-4"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
     </section>
 
     <!---------------------------Testimonials--------------------------->
 
-    <section class="bg-white/95 border border-gray-200 rounded-lg shadow-lg p-6 mb-10 mx-10 md:mx-90">
-      <!-- Overall Rating -->
+    <section class="bg-white/95 border-3 border-gray-200 rounded-lg shadow-lg p-6 mb-10 mx-auto max-w-4xl">
+  
       <div class="text-center mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Note des clients</h2>
         <div class="flex justify-center items-center mt-4">
-          <!-- Stars -->
+
           <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
           </svg>
-          <svg class=" w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
           </svg>
           <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
@@ -262,43 +299,43 @@
         <p class="text-gray-500 text-sm mt-2">4 sur 5 (1,745 notes)</p>
       </div>
     
-      <!-- Rating Breakdown -->
-      <div class="space-y-4">
-        <!-- 5 Stars -->
-        <div class="flex justify-center items-center">
-          <span class="text-sm font-medium text-gray-700">5 star</span>
+
+      <div class=" space-y-4">
+
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">5 étoiles</span>
           <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
             <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 60%"></div>
           </div>
           <span class="text-sm font-medium text-gray-700">60%</span>
         </div>
         <!-- 4 Stars -->
-        <div class="flex justify-center items-center">
-          <span class="text-sm font-medium text-gray-700">4 star</span>
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">4 étoiles</span>
           <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
             <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
           </div>
           <span class="text-sm font-medium text-gray-700">10%</span>
         </div>
         <!-- 3 Stars -->
-        <div class="flex justify-center items-center">
-          <span class="text-sm font-medium text-gray-700">3 star</span>
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">3 étoiles</span>
           <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
             <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
           </div>
           <span class="text-sm font-medium text-gray-700">10%</span>
         </div>
         <!-- 2 Stars -->
-        <div class="flex justify-center items-center">
-          <span class="text-sm font-medium text-gray-700">2 star</span>
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">2 étoiles</span>
           <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
             <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
           </div>
           <span class="text-sm font-medium text-gray-700">10%</span>
         </div>
         <!-- 1 Star -->
-        <div class="flex justify-center items-center">
-          <span class="text-sm font-medium text-gray-700">1 star</span>
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">1 étoile</span>
           <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
             <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
           </div>
