@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
 
@@ -32,62 +31,88 @@
     <!--MAIN -->
     <main class="flex flex-col text-center mb-20 mt-5">
 
+        <section class="alertDisplay hidden absolute z-10">
+            <div class="fixed inset-x-0 top-0 flex items-end justify-right px-4 py-6 justify-end">
+                <div
+                    class="max-w-sm w-full shadow-lg rounded px-4 py-3 rounded relative bg-[#ffc94f] border-l-4 border-[#191998] text-black">
+                    <div class="p-2">
+                        <div class="flex items-start">
+                            <div class="ml-3 w-0 flex-1 pt-0.5">
+                                <p class="text-sm leading-5 font-medium blackText" id="textDisplay">
+                                    Merci, votre message a bien été transmis à l'équipe !
+                                </p>
+                            </div>
+                            <div class="ml-4 flex-shrink-0 flex">
+                                <button class="inline-flex text-black transition ease-in-out duration-150"
+                                    onclick="return this.parentNode.parentNode.parentNode.parentNode.remove()">
+                                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Section présentation de l'entreprise -->
         <section>
-            <h1 class="text-[#191998] bg-white/90 border-b-1 border-b-black mb-8 mx-10 text-2xl xl:mx-50">Qui
+            <h1 class="text-[#191998] text-2xl bg-white/90 w-70 m-auto">Qui
                 sommes-nous ?
             </h1>
+            <hr
+                class="mb-8 my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-75 dark:via-neutral-800">
 
             <!-- Section "Qui sommes nous"-->
             <section class="flex flex-col gap-5 xl:flex-row-reverse xl:mx-20">
 
                 <!-- Section photos -->
                 <section
-                    class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 flex flex-col items-center pt-5">
+                    class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 flex flex-col items-center pt-5 xl:w-1/2">
                     <h2 class="font-bold">Découvrez l'équipe</h2>
 
                     <!-- Liste des articles -->
-                    <section class="flex flex-wrap items-center justify-center xl:h-full">
+                    <section class="flex flex-wrap items-center justify-center xl:h-full xl:fl">
 
                         <!-- 1 article = 1 photo + nom + job title-->
-                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem]">
-                            <img class="rounded-full border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120"
-                                src="https://www.gravatar.com/avatar/87622?d=retro&s=300" alt="Photo de l'équipe"
-                                width="100px">
+                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem] xl:my-4">
+                            <img class="rounded-full w-30 border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120 2xl:w-40 2xl:hover:scale-115"
+                                src="./assetes/images/arnaud2.jpg" alt="Photo de l'équipe">
                             <p class="font-bold">Arnaud D.</p>
-                            <p class="blackText">Directeur artistique</p>
+                            <p class="blackText">Recenseur de restaurants</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem]">
-                            <img class="rounded-full border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120"
-                                src="https://avatars.githubusercontent.com/u/201117139?s=300&v=4"
-                                alt="Photo de l'équipe" width="100px">
+                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem] xl:my-4">
+                            <img class="rounded-full w-30 border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120 2xl:w-40 2xl:hover:scale-115"
+                                src="./assetes/images/david2.jpg" alt="Photo de l'équipe">
                             <p class="font-bold">David dM.</p>
-                            <p class="blackText">Consultant JS</p>
+                            <p class="blackText">Artificier en chef</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem]">
-                            <img class="rounded-full border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120"
+                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem] xl:my-4">
+                            <img class="rounded-full w-30 border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120 2xl:w-40 2xl:hover:scale-115"
                                 src="https://storage.googleapis.com/assets_upload_prod/R00FVsszSGz3JO1EYfsAMh6n7bMS0zOA.jpg"
-                                alt="Photo de l'équipe" width="100px">
+                                alt="Photo de l'équipe">
                             <p class="font-bold">Guillaume Z.</p>
                             <p class="blackText">Happiness manager</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem]">
-                            <img class="rounded-full border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120"
-                                src="https://www.gravatar.com/avatar/86876?d=monsterid&s=300" alt="Photo de l'équipe"
-                                width="100px">
+                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem] xl:my-4">
+                            <img class="rounded-full w-30 border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120 2xl:w-40 2xl:hover:scale-115"
+                                src="./assetes/images/quentin2.png" alt="Photo de l'équipe">
                             <p class="font-bold">Quentin B.</p>
-                            <p class="blackText">Expert framework</p>
+                            <p class="blackText">Background artist</p>
                         </article>
 
-                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem]">
-                            <img class="rounded-full border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120"
+                        <article class="flex flex-col items-center my-6 w-[12rem] xl:w-[16rem] xl:my-4">
+                            <img class="rounded-full w-30 border-[#ffc94f] border-4 mb-2 transition duration-300 hover:scale-120 2xl:w-40 2xl:hover:scale-115"
                                 src="https://storage.googleapis.com/assets_upload_prod/DzveiDPFXjTyaxR8CrX49JG6pb03qPu6.jpg"
-                                alt="Photo de l'équipe" width="100px">
+                                alt="Photo de l'équipe">
                             <p class="font-bold">Rahmoun D.</p>
-                            <p class="blackText">Chef de projet</p>
+                            <p class="blackText">Ingénieur carrousel</p>
                         </article>
                     </section>
                 </section>
@@ -100,26 +125,45 @@
                         class="bg-[#e4e6e8]/95 mx-5 rounded-lg shadow-secondary-1 py-5 shadow-lg dark:shadow-black/30">
                         <h2 class="font-bold mb-5">Notre histoire</h2>
 
-                        <p class="mx-10 blackText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                            assumenda
-                            consequuntur
-                            nisi
-                            quae
-                            sapiente, deserunt saepe quibusdam laborum at in magni veniam optio itaque mollitia
-                            sequi
-                            nihil
-                            asperiores nemo cumque.
-                            Tempora incidunt quas sit veniam quasi suscipit at! Laborum culpa qui eius ducimus sint
-                            in
-                            dolorem
-                            doloribus, tempore cumque, voluptatibus nihil maiores ipsa modi nulla praesentium nam
-                            necessitatibus! In, beatae?
-                            Vitae tempore pariatur mollitia ratione iusto quidem quia praesentium maxime distinctio
-                            voluptates
-                            delectus quam odio debitis a natus nesciunt, laborum, saepe suscipit ipsum incidunt
-                            atque
-                            aliquam
-                            modi aspernatur perspiciatis. Obcaecati?</p>
+                        <p class="mx-10 blackText transition duration-900 hover:translate-x-4">Fourch’Est
+                            est né d’une
+                            idée simple : offrir aux habitants du Grand
+                            Est un service de livraison qui met en avant la richesse culinaire de leur région. En
+                            tant
+                            qu’étudiants passionnés par la gastronomie et l’entrepreneuriat, nous avons voulu créer
+                            une
+                            alternative locale aux grandes plateformes, en valorisant les restaurateurs et artisans
+                            qui
+                            font vivre notre terroir.<br><br></p>
+                        <hr
+                            class="my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-75 dark:via-neutral-800">
+                        <br>
+                        <p class="mx-10 blackText transition duration-900 hover:translate-x-4">
+                            Notre équipe de cinq amis partage une ambition commune : permettre à chacun de découvrir
+                            ou
+                            redécouvrir les saveurs du Grand Est, tout en bénéficiant d’un service de livraison
+                            rapide
+                            et efficace. Que ce soit une spécialité alsacienne, un plat traditionnel lorrain ou un
+                            fast-food pour une envie plus urbaine, Fourch’Est s’adapte à tous les goûts et toutes
+                            les
+                            envies.<br>
+
+                            Notre mission est de créer un écosystème où les restaurants locaux prospèrent, où les
+                            consommateurs ont accès à une offre variée et authentique, et où la livraison devient
+                            une
+                            expérience fluide et agréable. En collaborant avec des acteurs régionaux, nous
+                            souhaitons
+                            faire de Fourch’Est bien plus qu’un simple service : une véritable communauté engagée
+                            autour
+                            du bien manger et du savoir-faire local.<br><br></p>
+                        <hr
+                            class="my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-75 dark:via-neutral-800">
+                        <br>
+                        <p class="mx-10 blackText transition duration-900 hover:translate-x-4">L’aventure ne fait
+                            que
+                            commencer, et nous avons de grandes ambitions pour Fourch’Est.
+                            Rejoignez-nous dans cette belle aventure culinaire et ensemble, faisons rayonner la
+                            gastronomie du Grand Est !</p>
                     </section>
 
                     <!-- Section contact -->
@@ -166,29 +210,33 @@
 
         <!-- Section mentions légales -->
         <section class="mt-10">
-            <h1 class="bg-white/90 text-[#191998] border-b-1 border-b-black mt-8 mb-8 mx-20 text-2xl xl:mx-50">
+            <h1 class="text-[#191998] text-2xl bg-white/90 w-70 m-auto">
                 Mentions
                 légales</h1>
+            <hr
+                class="mb-8 my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-75 dark:via-neutral-800">
+
             <section
                 class="bg-[#e4e6e8]/95 rounded-lg shadow-secondary-1 shadow-lg dark:shadow-black/30 py-5 mx-5 xl:mx-20">
                 <section class="flex flex-col mx-10 gap-y-5">
                     <p class="blackText">Nom de l’entreprise : Fourch'Est<br>
-                        Adresse : 27 rue du porc effiloché, Strasbourg, FRANCE<br>
+                        Adresse : 27 rue du porc effiloché, Strasbourg, France<br>
                         Téléphone : 08 36 65 65 65<br>
                         Email : contact@fourchest.com<br>
                         SIRET : 123 456 789 00000<br><br>
 
-                        Le site est hébergé par [Nom de l’hébergeur]<br>
-                        Adresse de l’hébergeur : [Adresse]<br>
-                        Téléphone : [Téléphone]<br>
+                        Le site est hébergé par Grand Est Network<br>
+                        Adresse de l’hébergeur : 14 avenue Poincarré, Nancy, France<br>
+                        Téléphone : 3630 3630<br><br>
 
                         Propriété intellectuelle :<br>
-                        L’ensemble du contenu de ce site (textes, images, graphismes, logos, etc.) est la propriété de
-                        [Nom de l’entreprise] et est protégé par le droit d’auteur. Toute reproduction, modification ou
+                        L’ensemble du contenu de ce site (textes, images, graphismes, logos, etc.) est la propriété
+                        de
+                        Fourch'Est et est protégé par le droit d’auteur. Toute reproduction, modification ou
                         diffusion sans autorisation est interdite.<br>
                         <br>
                         Responsabilité :<br>
-                        [Nom du site] ne peut être tenu responsable en cas d’erreurs, d’indisponibilité ou de dommages
+                        Fourch'Est ne peut être tenu responsable en cas d’erreurs, d’indisponibilité ou de dommages
                         liés à l’utilisation du site.
                     </p>
                 </section>
