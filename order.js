@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  ////////////////////////// Mise à jour du panier //////////////////////////////
+  ////////////////////////// Mise à jour du panier0 //////////////////////////////
   function updateCart() {
     // Mise à jour du nombre d'articles et du total
     itemCount.textContent = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
