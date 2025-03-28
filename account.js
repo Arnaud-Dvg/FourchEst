@@ -87,7 +87,7 @@ function createCard(resto) {
         "absolute",
         "bottom-0",
         "left-0",
-        "bg-indigo-600",
+        "bg-[#191998]",
         "px-4",
         "py-2",
         "text-white",
@@ -107,7 +107,7 @@ function createCard(resto) {
         "absolute",
         "top-0",
         "right-0",
-        "bg-indigo-600",
+        "bg-[#191998]",
         "px-4",
         "text-white",
         "rounded-full",
@@ -176,7 +176,7 @@ function createCard(resto) {
     // Bouton "Aller à la page"
     const goToPageButton = document.createElement("button");
     goToPageButton.textContent = "Voir la carte";
-    goToPageButton.classList.add("bg-indigo-600", "text-white", "px-4", "py-2", "rounded", "hover:bg-indigo-700", "transition", "duration-300", "mt-4");
+    goToPageButton.classList.add("bg-[#191998]", "text-white", "px-4", "py-2", "rounded", "hover:bg-indigo-700", "transition", "duration-300", "mt-4");
 
     // Action au clic
     goToPageButton.addEventListener("click", () => {
@@ -337,7 +337,7 @@ function createOrderCard(order) {
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <button class="py-5 w-96 bg-gray-800 text-white">Commander à nouveau</button>
+                        <button class="py-5 w-96 bg-[#191998] text-white">Commander à nouveau</button>
                     </div>
                 </div>
             </div>
@@ -377,7 +377,7 @@ renderOrders();
 
 /* Information personnel du client */
 
-// Function to handle editing personal info
+// Modification des infos personnel
 document.getElementById('edit-personal-info-btn').addEventListener('click', () => {
     const email = prompt("Entrez votre nouvel email:", "bg-67@caramail.com");
     if (email) {
@@ -387,7 +387,7 @@ document.getElementById('edit-personal-info-btn').addEventListener('click', () =
     }
 });
 
-// Function to handle editing billing address
+// modification de l'adresse de livraison
 document.getElementById('edit-billing-address-btn').addEventListener('click', () => {
     const billingAddress = prompt("Entrez votre nouvelle adresse de facturation:", "6, rue des Grand hommes, 67000 Strasbourg");
     if (billingAddress) {
@@ -397,7 +397,7 @@ document.getElementById('edit-billing-address-btn').addEventListener('click', ()
     }
 });
 
-// Function to handle editing shipping address
+// Modification de l'adresse de livraison
 document.getElementById('edit-shipping-address-btn').addEventListener('click', () => {
     const newShippingAddress = prompt("Entrez votre nouvelle adresse de livraison:");
     if (newShippingAddress) {
@@ -412,7 +412,7 @@ document.getElementById('edit-shipping-address-btn').addEventListener('click', (
     }
 });
 
-// Function to handle editing a comment on a shipping address
+// modification du commentaire de l'adresse de livraison
 document.querySelectorAll('.edit-comment-btn').forEach(button => {
     button.addEventListener('click', function() {
         const currentComment = this.parentElement.previousElementSibling.textContent;
