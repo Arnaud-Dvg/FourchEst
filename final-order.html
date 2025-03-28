@@ -10,7 +10,20 @@
   <meta name="author" content="Wilders Grand'EST">
   <link rel="stylesheet" href="./src/style.css">
   <title>Finaliser la commande - Brasserie Excelsior</title>
-
+  <style>
+    #fireworks-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+</style>
+a
 </head>
 
 
@@ -41,8 +54,8 @@
 
 
     <!---------------------------Bannière du restaurant--------------------->
-    <section class="relative">
-      <img src="/assetes/images/resto1OrderP.jpg" alt="Restaurant Bannière" class="w-full h-56 object-cover" />
+    <section class="lg:flex lg:justify-center">
+      <img src="/assetes/images/resto1.jpg" alt="Restaurant banner" class=" lg:w-7xl lg:rounded-xl lg:h-80   object-cover" />
     </section>
 
 
@@ -108,15 +121,21 @@
               </div>
 
               <!---------------------------Bouton de finalisation--------------------->
-              <button type="button"
+              <button type="button" id="commande-btn"
                 class="w-full bg-[#191968] text-white hover:text-black px-4 mt-3 py-2 rounded-full hover:bg-blue-300 transition">
                 Finaliser la commande
               </button>
+
+              <!-- Conteneur des feux d'artifice -->
+              <div id="fireworks-container"></div>
+
             </form>
           </div>
         </div>
       </div>
+            <!---------------------------Feux d'artifice--------------------->
 
+      
 
       <!---------------------------Lien pour retourner à la sélection (order.html)--------------------->
       <div class="mt-6 mb-5 text-center">
@@ -245,6 +264,7 @@
 
 
   <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./validation.js"></script>
 </body>
 
 </html>
