@@ -13,6 +13,10 @@ const images = [
   'assetes/images/bretzel.jpg',
   'assetes/images/choucroute.jpg',
   'assetes/images/flam.jpg',
+  'assetes/images/Baeckeoffe.jpg',
+  'assetes/images/gouglof.png',
+  'assetes/images/pates.jpg',
+  'assetes/images/quiche-lorraine.jpg',
 ];
 
 // Fonction pour la creation du carousel 
